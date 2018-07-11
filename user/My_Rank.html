@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html style="height: 100%;" ng-app="mySuperApp">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/ionic.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../css/main.css" />
+		<script src="../js/jquery-2.2.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/ionic.bundle.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/iconfont.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body ng-controller="PopupCtrl" class="Edit_body">
+		<div class="bar bar-header bar-assertive Edit_header">
+			<button class="button button-clear pull-left Edit_header_btn" id="fanhui" id="Return"><i class="icon iconfont icon-fanhui1"></i></button>
+			<h3 class="title Edit_header_title">我的等级</h3>
+		</div>
+		<div class="content has-header Edit_content Edit_content_all">
+			<div class="Edit_user_detail">
+				<div class="list card Edit_content_card">
+					<div class="item item-avatar item-icon-right Edit_content_card_detail" style="padding-left: 135px;">
+						<img src="../img/123.PNG" style="max-width: 100px;max-height: 100px;top: 12px;"/>
+						<p class="Edit_user_dateil_color">昵称：LJQ</p>
+						<p class="Edit_user_dateil_color">会员等级：100级</p>
+						<p class="Edit_user_dateil_color">注册时间：2018/3/25</p>
+						<p class="Edit_user_dateil_color">账户余额：900（元）</p>
+					</div>
+				</div>
+				<div class="Edit_content_list">
+					<div class="list">
+						<div class="item  Edit_content_card_detail">
+						    <h5>会员等级说明：</h5>
+						    <p class="Edit_rank_illustrateText">会员注册成功，会员自带等级为10级，可免费发布10条信息，交易每40元升一级，每介绍一个会员注册升一级，在线付款20快升5级；以此类推，4块升一级</p>
+						    <p class="Edit_rank_illustrateText">以上说明待定，贡寿服务官网有最终解释权</p>
+					    </div>
+                        <div class="item  Edit_content_card_detail">
+						    <p><span>我的等级：100级</span><span class="Edit_rank_detailRecord">查看升级记录</span></p>
+					    </div>
+					    <div class="item">
+						    <p style="padding-bottom: 16px;">升级通道</p>
+						    <div class="button-bar bar-balanced">
+                                <a class="button E-btn">5元/1级</a>
+                                <a class="button E-btn">50元/12级</a>
+                            </div>
+                            <div class="button-bar bar-balanced">
+                                <a class="button E-btn">100元/25级</a>
+                                <a class="button E-btn">500元/130级</a>
+                            </div>
+						    <ul class="list-unstyled" style="display: inline-flex;width: 100%;margin-top: 12px;">
+                                <li style="width: 20%;">充值方式：</li>
+                                <li style="width: 20%;text-align: center;">
+                                   <i class="icon iconfont icon-weixin" style="font-size: 32px;color: forestgreen;"></i>
+                                   <div class="name" style="padding: 3px 0;font-size: 12px">微信</div>
+                                </li>
+                                <li style="width: 20%;text-align: center;color: #1196db;">
+                                    <i class="icon iconfont icon-zhifubao" style="font-size: 32px;"></i>
+                                    <div class="name" style="color: #444;font-size: 12px;padding: 3px 0;">支付宝</div>
+                                </li>
+                                <li style="width: 20%;text-align: center;color: #1196db;">
+                                    <i class="icon iconfont icon-yuezhifu" style="font-size: 32px;"></i>
+                                    <div class="name" style="color: #444;font-size: 12px;padding: 3px 0;">余额支付</div>
+                                </li>
+                            </ul>
+						    <p class="Edit_rank_illustrateText text-center" style="padding-top: 8px;">注意：默认支付方式为账户余额支付</p>
+					    </div>
+					    <div class="item item-input Edit_content_listitem">
+					    	<div class="col-20"></div>
+						    <button class="button button-assertive button-small col-25" ng-click="showConfirmFail()">放弃返回</button>
+					    	<div class="col-10"></div>
+						    <button class="button button-assertive button-small col-25" ng-click="showConfirmSuccess()">立刻升级</button>
+					    	<div class="col-20"></div>
+					    </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--底部-->
+		<div class="tabs tabs-icon-top footer-bar">
+			<a class="tab-item footer-L33" href="../index.html">
+				<i class="icon iconfont icon-shouye footer-icon"></i>
+				<span>首页</span>
+			</a>
+			<a class="tab-item footer-L33" href="../message/message.html">
+				<i class="icon iconfont icon-zixun footer-icon"></i>
+				<span>资讯</span>
+			</a>
+			<a class="tab-item footer-L33" href="../publish/publish.html">
+				<i class="icon iconfont icon-paperplane footer-icon"></i>
+				<span>发布信息</span>
+			</a>
+			<a class="tab-item footer-L33" href="#">
+				<i class="icon iconfont icon-qiyeruzhu footer-icon"></i>
+				<span>入驻</span>
+			</a>
+			<a class="tab-item footer-L33 footer-active" href="User.html">
+				<i class="icon iconfont icon-04 footer-icon"></i>
+				<span>我的</span>
+			</a>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$('#fanhui').click(function(){
+	        	window.location.href = document.referrer;
+	        })
+		
+		$('.E-btn').click(function(){
+			$('.E-btn').removeClass('button-assertive');
+			$(this).addClass('button-assertive');
+		})
+		
+		$('.Edit_recharge_delete_a').click(function(){
+			event.preventDefault();
+			$('.Edit_recharge_delete_a').css('color','black');
+			$(this).css('color','#CA0000');
+		})
+		
+		angular.module('mySuperApp', ['ionic']).controller('PopupCtrl',function($scope, $ionicPopup, $timeout) {
+           //confirm 对话框
+            $scope.showConfirmFail = function() {
+             var confirmPopup = $ionicPopup.confirm({
+               title: '',
+               templateUrl: '', // String (可选)。在弹窗body内的html模板的URL。
+               scope: null, // Scope (可选)。一个链接到弹窗内容的scope（作用域）。
+               template: "<p class='icon ion-close-circled' style='color: #CA0000;; font-size:99px;text-align:center'></p><p style='text-align:center;font-size:12px'>很抱歉，支付失败！</p><p style='color:#c2c2c2;text-align:center;font-size:9px'>失败原因：1.密码错误 2.金额数字无效 3.余额不足</p><p style='color:#c2c2c2;text-align:center;font-size:9px'>以上原因都不是，<a href='#' style='color:#ca0000'>联系客服</a></p>",
+               buttons: [{ //Array[Object] (可选)。放在弹窗footer内的按钮。
+                            text: '取消',
+                            type: 'button-light',
+                           }, {
+                            text: '确定',
+                            type: 'button-assertive',
+                            }]
+             });
+             confirmPopup.then(function(res) {
+               if(res) {
+                 console.log('成功！');
+               } else {
+                 console.log('失败！');
+               }
+             });
+           }
+            
+            
+            //confirm 对话框
+            $scope.showConfirmSuccess = function() {
+             var confirmPopup = $ionicPopup.confirm({
+               title: '',
+               templateUrl: '', // String (可选)。在弹窗body内的html模板的URL。
+               scope: null, // Scope (可选)。一个链接到弹窗内容的scope（作用域）。
+               template: "<p class='icon ion-checkmark' style='color: #CA0000;; font-size:99px;text-align:center'></p><p style='text-align:center;font-size:12px'>恭喜你，付款成功！</p></p>",
+               buttons: [{ //Array[Object] (可选)。放在弹窗footer内的按钮。
+                            text: '取消',
+                            type: 'button-light',
+                           }, {
+                            text: '确定',
+                            type: 'button-assertive',
+                            }]
+             });
+             confirmPopup.then(function(res) {
+               if(res) {
+                 console.log('成功！');
+               } else {
+                 console.log('失败！');
+               }
+             });
+           }
+            
+            
+             var st="<script type='text/javascript'>var InputNum = document.getElementsByClassName('input_pass');  for(var i = 0; i<InputNum.length;i++){  InputNum[i].index = i;  InputNum[i].onkeyup=function(){ if(event.keyCode!=8){var next = this.index + 1; if(next > InputNum.length - 1) return;  InputNum[next].focus();}else{var pre=this.index-1;if(pre < 0) return;InputNum[pre].focus();}}}";
+             $scope.showConfirm_one= function() {
+             var confirmPopup_one = $ionicPopup.confirm({
+               title: '',
+               templateUrl: '', // String (可选)。在弹窗body内的html模板的URL。
+               scope: null, // Scope (可选)。一个链接到弹窗内容的scope（作用域）。
+               template: "<p class='text-center'>请输入您的密码</p><p class='text-center'><input type='password'  maxlength='1' class='input_pass'><input type='password' maxlength='1' class='input_pass'><input type='password' maxlength='1' class='input_pass'><input type='password' maxlength='1' class='input_pass'><input type='password' maxlength='1' class='input_pass'><input type='password' maxlength='1' class='input_pass'></p>"+st,
+               buttons: [{ //Array[Object] (可选)。放在弹窗footer内的按钮。
+                            text: '取消',
+                            type: 'button-light',
+                           }, {
+                            text: '确定',
+                            type: 'button-assertive',
+                            }]
+             });
+             confirmPopup_one.then(function(res) {
+               if(res) {
+                 console.log('成功！');
+               } else {
+                 console.log('失败！');
+               }
+             });
+           }
+             
+	    });
+	</script>
+</html>

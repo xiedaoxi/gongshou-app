@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/ionic.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/main.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/mobileSelect.css" />
+		<script src="../../js/jquery-2.2.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/ionic.bundle.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/mobileSelect.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/city.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/picker.min.js" type="text/javascript" charset="utf-8"></script>
+		<title></title>
+		<style>
+			.M-C-UserImg{
+				border-radius: 50%;
+				height: 45px;
+				padding: 0;
+				margin: 12px 0 0 0px ;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="bar bar-header bar-assertive Edit_header">
+			<button class="button button-clear pull-left Edit_header_btn" id="fanhui" id="Return"><i class="icon iconfont icon-fanhui1"></i></button>
+			<h3 class="title Edit_header_title">我的收藏</h3>
+		</div>
+		<div class="content has-header">
+			<div class="M-LS">
+				<button class="sel_city button button-outline button-light M-LB" id="sel_city">选取省市区县<span class="caret"></span></button>
+				<span>|</span>
+				<button class="button button-outline button-light M-LB" id="fenlei">选取项目分类<span class="caret"></span></button>
+			</div>
+			
+		</div>
+		
+		<script type="text/javascript">	
+			var arr=[
+{img:'../../img/123.PNG',img1:'../../img/flower1.png',img2:'../../img/flower2.png',
+img3:'../../img/flower3.png',text:'GS3546546',dengji:'20',
+shuju1:'1000',shuju2:'100',shuju3:'180',shuju4:'900',
+conent:'高档仿真花制作，由于新产品上市，国内外市场受欢迎供不应求。面向全国诚招联合生产经营加盟合作商户，产品包回收，提供订单，保障长年有活。产品批交批结。把分厂办到全国各地。'},
+{img:'../../img/123.PNG',img1:'../../img/flower1.png',img2:'../../img/flower2.png',
+img3:'../../img/flower3.png',text:'GS3546546',dengji:'20',
+shuju1:'1000',shuju2:'100',shuju3:'180',shuju4:'900',
+conent:'高档仿真花制作，由于新产品上市，国内外市场受欢迎供不应求。面向全国诚招联合生产经营加盟合作商户，产品包回收，提供订单，保障长年有活。产品批交批结。把分厂办到全国各地。'},
+{img:'../../img/123.PNG',img1:'../../img/flower1.png',img2:'../../img/flower2.png',
+img3:'../../img/flower3.png',text:'GS3546546',dengji:'20',
+shuju1:'1000',shuju2:'100',shuju3:'180',shuju4:'900',
+conent:'高档仿真花制作，由于新产品上市，国内外市场受欢迎供不应求。面向全国诚招联合生产经营加盟合作商户，产品包回收，提供订单，保障长年有活。产品批交批结。把分厂办到全国各地。'},
+{img:'../../img/123.PNG',img1:'../../img/flower1.png',img2:'../../img/flower2.png',
+img3:'../../img/flower3.png',text:'GS3546546',dengji:'20',
+shuju1:'1000',shuju2:'100',shuju3:'180',shuju4:'900',
+conent:'高档仿真花制作，由于新产品上市，国内外市场受欢迎供不应求。面向全国诚招联合生产经营加盟合作商户，产品包回收，提供订单，保障长年有活。产品批交批结。把分厂办到全国各地。'},
+{img:'../../img/123.PNG',img1:'../../img/flower1.png',img2:'../../img/flower2.png',
+img3:'../../img/flower3.png',text:'GS3546546',dengji:'20',
+shuju1:'1000',shuju2:'100',shuju3:'180',shuju4:'900',
+conent:'高档仿真花制作，由于新产品上市，国内外市场受欢迎供不应求。面向全国诚招联合生产经营加盟合作商户，产品包回收，提供订单，保障长年有活。产品批交批结。把分厂办到全国各地。'}
+];
+var html='';
+//循环数组
+for(var i=0;i<arr.length;i++){
+	html+=`<hr class="M-HR" />
+	<div class="M-C-Box">
+					<div class="M-C-Left">
+						<img src=`+arr[i].img+` class="M-C-UserImg" />
+					</div>
+					<div class="M-C-Right">
+						<div style="font-size: 10px;overflow: hidden;">
+							<div class="M-C-Detail-L">
+								<p style="margin-top: 16px;margin-bottom: 2px;">
+									<span>编号</span>
+									<span>`+arr[i].text+`</span>
+									<span>级别</span>
+									<span>`+arr[i].dengji+`级</span>
+								</p>
+								<div class="M-C-Type">销售</div>
+							</div>
+							<div class="M-C-Detail-R">
+								<button class="M-C-BoxBtn">
+		    				      <b class="icon iconfont icon-duihuakuang" style="font-size: 10px;"></b>
+		    				      <b>联系他</b>
+		    			        </button>
+							</div>
+						</div>
+						<div>
+							<p class="mui-ellipsis-3">`+arr[i].conent+`</p>
+							<span class="publish_readdetail">查看全文</span>
+							<br />
+							<img src=`+arr[i].img1+` style="width: 75px;height: 75px;" />
+							<img src=`+arr[i].img2+` style="width: 75px;height: 75px;" />
+							<img src=`+arr[i].img3+` style="width: 75px;height: 75px;" />
+							<br />
+						</div>
+						<div class="M-C-Footer">
+							<p style="font-size: 10px;margin-bottom: 0;margin-top: 8px;">刚刚</p>
+							<p style="display: flex;flex-direction: row;justify-content: space-around;align-items: center;">
+							<i class="icon iconfont icon-liulan"><span class="shoucang-color-black">`+arr[i].shuju1+`</span></i>
+							<i class="icon iconfont icon-dianzan"><span class="shoucang-color-black">`+arr[i].shuju2+`</span></i>
+							<i class="icon iconfont icon-pinglun"><span class="shoucang-color-black">`+arr[i].shuju3+`</span></i>
+							<i class="icon iconfont icon-shoucang information-i"><span class="shoucang-color-black">`+arr[i].shuju4+`</span></i>
+							</p>
+						</div>
+					</div>
+				</div>`
+}
+$('.has-header').append(html)
+		
+		$('#fanhui').click(function() {
+			window.history.go(-1);
+		})
+		
+			//选择分类
+			var fenlei = new MobileSelect({
+				trigger: '#fenlei',
+				title: '选择分类',
+				wheels: [{
+					data: [{
+						id: '1',
+						value: '采购'
+					}, {
+						id: '2',
+						value: '顺风车',
+						childs: [{
+							id: '1',
+							value: '人找车'
+						}, {
+							id: '2',
+							value: '车找人'
+						}, {
+							id: '3',
+							value: '货找车'
+						}, {
+							id: '4',
+							value: '车找货'
+						}, ]
+					}, {
+						id: '3',
+						value: '有赏需求'
+					}, {
+						id: '4',
+						value: '找资金'
+					}, {
+						id: '5',
+						value: '求职招聘'
+					}, {
+						id: '6',
+						value: '销售'
+					}, {
+						id: '7',
+						value: '办事服务'
+					}, {
+						id: '8',
+						value: '择偶交友'
+					}, ]
+				}],
+				transitionEnd: function(indexArr, data) {
+					console.log(data);
+				},
+				callback: function(indexArr, data) {
+					console.log(data);
+				}
+			});
+			
+			
+			
+			//地址选择初始化1
+			var nameEl = document.getElementsByClassName('sel_city')[0];
+			var first = []; /* 省，直辖市 */
+			var second = []; /* 市 */
+			var third = []; /* 镇 */
+			var selectedIndex = [0, 0, 0]; /* 默认选中的地区 */
+			var checked = [0, 0, 0]; /* 已选选项 */
+			function creatList(obj, list) {
+				obj.forEach(function(item, index, arr) {
+					var temp = new Object();
+					temp.text = item.name;
+					temp.value = index;
+					list.push(temp);
+				})
+			}
+			creatList(city, first);
+			if(city[selectedIndex[0]].hasOwnProperty('sub')) {
+				creatList(city[selectedIndex[0]].sub, second);
+			} else {
+				second = [{
+					text: '',
+					value: 0
+				}];
+			}
+			if(city[selectedIndex[0]].sub[selectedIndex[1]].hasOwnProperty('sub')) {
+				creatList(city[selectedIndex[0]].sub[selectedIndex[1]].sub, third);
+			} else {
+				third = [{
+					text: '',
+					value: 0
+				}];
+			}
+			var picker = new Picker({
+				data: [first, second, third],
+				selectedIndex: selectedIndex,
+				title: '地址选择'
+			});
+			picker.on('picker.select', function(selectedVal, selectedIndex) {
+				var text1 = first[selectedIndex[0]].text;
+				var text2 = second[selectedIndex[1]].text;
+				var text3 = third[selectedIndex[2]] ? third[selectedIndex[2]].text : '';
+				nameEl.innerText = text1 + ' ' + text2 + ' ' + text3;
+			});
+			picker.on('picker.change', function(index, selectedIndex) {
+				if(index === 0) {
+					firstChange();
+				} else if(index === 1) {
+					secondChange();
+				}
+
+				function firstChange() {
+					second = [];
+					third = [];
+					checked[0] = selectedIndex;
+					var firstCity = city[selectedIndex];
+					if(firstCity.hasOwnProperty('sub')) {
+						creatList(firstCity.sub, second);
+
+						var secondCity = city[selectedIndex].sub[0]
+						if(secondCity.hasOwnProperty('sub')) {
+							creatList(secondCity.sub, third);
+						} else {
+							third = [{
+								text: '',
+								value: 0
+							}];
+							checked[2] = 0;
+						}
+					} else {
+						second = [{
+							text: '',
+							value: 0
+						}];
+						third = [{
+							text: '',
+							value: 0
+						}];
+						checked[1] = 0;
+						checked[2] = 0;
+					}
+
+					picker.refillColumn(1, second);
+					picker.refillColumn(2, third);
+					picker.scrollColumn(1, 0)
+					picker.scrollColumn(2, 0)
+				}
+
+				function secondChange() {
+					third = [];
+					checked[1] = selectedIndex;
+					var first_index = checked[0];
+					if(city[first_index].sub[selectedIndex].hasOwnProperty('sub')) {
+						var secondCity = city[first_index].sub[selectedIndex];
+						creatList(secondCity.sub, third);
+						picker.refillColumn(2, third);
+						picker.scrollColumn(2, 0)
+					} else {
+						third = [{
+							text: '',
+							value: 0
+						}];
+						checked[2] = 0;
+						picker.refillColumn(2, third);
+						picker.scrollColumn(2, 0)
+					}
+				}
+
+			});
+			picker.on('picker.valuechange', function(selectedVal, selectedIndex) {
+				console.log(selectedVal);
+				console.log(selectedIndex);
+			});
+
+			nameEl.addEventListener('click', function() {
+				picker.show();
+			});
+			
+			
+					//			详细展开
+			$(function() {
+				$('.publish_readdetail').click(function() {
+					if($(this).text() == '查看全文') {
+						$(this).text('收起全文');
+					} else {
+						$(this).text('查看全文');
+					}
+					$(this).prev().toggleClass('mui-ellipsis-3');
+				});
+			});
+		</script>
+	</body>
+
+</html>

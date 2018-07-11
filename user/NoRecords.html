@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/ionic.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../css/main.css" />
+		<script src="../js/jquery-2.2.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/ionic.bundle.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body ng-controller="PopupCtrl" class="Edit_body">
+		<div class="bar bar-header bar-assertive Edit_header">
+			<button class="button button-clear pull-left Edit_header_btn" id="fanhui" id="Return"><i class="icon iconfont icon-fanhui1"></i></button>
+			<h3 class="title Edit_header_title">没有记录</h3>
+		</div>
+		<div class="content has-header Edit_content Edit_content_all">
+			<div class="Edit_user_detail">
+				<div class="list card Edit_content_card">
+					<div class="item item-avatar item-icon-right Edit_content_card_detail">
+						<img src="../img/123.PNG" />
+						<p class="Edit_user_dateil_color">昵称：LJQ</p>
+						<p class="Edit_user_dateil_color">会员等级：100级</p>
+						<p class="Edit_user_dateil_color">注册时间：2018/3/25</p>
+						<p class="Edit_user_dateil_color">账户余额：900（元）</p>
+					</div>
+				</div>
+				<div class="Edit_content_list Edit_norecord">
+					<div class="list">
+                        <i class="icon ion-android-search Edit_norecord_icon"></i>
+                        <p class="Edit_norecord_text">暂时没有相关记录</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--底部-->
+		<div class="tabs tabs-icon-top footer-bar">
+			<a class="tab-item footer-L33" href="../index.html">
+				<i class="icon iconfont icon-shouye footer-icon"></i>
+				<span>首页</span>
+			</a>
+			<a class="tab-item footer-L33" href="#">
+				<i class="icon iconfont icon-zixun footer-icon"></i>
+				<span>资讯</span>
+			</a>
+			<a class="tab-item footer-L33" href="#">
+				<i class="icon iconfont icon-paperplane footer-icon"></i>
+				<span>发布信息</span>
+			</a>
+			<a class="tab-item footer-L33" href="#">
+				<i class="icon iconfont icon-jiaoyi footer-icon"></i>
+				<span>我的交易</span>
+			</a>
+			<a class="tab-item footer-L33 footer-active" href="User.html">
+				<i class="icon iconfont icon-04 footer-icon"></i>
+				<span>我的</span>
+			</a>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$('#fanhui').click(function(){
+	        	window.location.href = document.referrer;
+	        })
+	</script>
+</html>

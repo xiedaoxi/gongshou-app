@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/main.css" />
+		<link rel="stylesheet" type="text/css" href="../css/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../css/ionic.min.css" />
+	</head>
+	<body>
+		<div class="bar bar-header bar-assertive login_heater">
+			<button class="button button-clear login_header_color" id="back"><i class="icon iconfont icon-fanhui1"></i></button>
+			<h1 class="title" style="font-size: 18px;font-weight: bold;">入驻</h1>
+		</div>
+		<hr class="hrStyle" />
+		<div class="MainPage_Content tab-content" style="margin-top: 60px;height: 615px;background-color: #FFFFFF;">
+		    <div class="list">
+		    	<a class="item" href="#">
+                  <p>入驻广告，资讯，请联系我们技术部人员：</p>
+                </a>
+                <a class="item item-avatar" href="#">
+                   <img src="../img/logo.png">
+                   <h2>电话号码：18279163634（谌总）</h2>
+                   <p>微信号：18279163634</p>
+                   <img src="../img/code1.jpg" style="width: 100px;height: 100px;"/>
+                </a>
+                <a class="item item-avatar" href="#">
+                   <img src="../img/logo.png">
+                   <h2>电话号码：13168136892（梁先生）</h2>
+                   <p>微信号：13168136892</p>
+                   <img src="../img/code2.jpg" style="width: 100px;height: 100px;"/>
+                </a>
+            </div>
+		</div>  
+		<!--底部-->
+		<div class="tabs tabs-icon-top footer-bar">
+			<a class="tab-item footer-L33" href="../index.html">
+				<i class="icon iconfont icon-shouye footer-icon"></i>
+				<span>首页</span>
+			</a>
+			<a class="tab-item footer-L33 " href="message.html">
+				<i class="icon iconfont icon-zixun footer-icon"></i>
+				<span>资讯</span>
+			</a>
+			<a class="tab-item footer-L33" href="../publish/publish.html">
+				<i class="icon iconfont icon-paperplane footer-icon"></i>
+				<span>发布信息</span>
+			</a>
+			<a class="tab-item footer-L33 footer-active" href="enter.html">
+				<i class="icon iconfont icon-qiyeruzhu footer-icon"></i>
+				<span>入驻</span>
+			</a>
+			<a class="tab-item footer-L33" href="../user/User.html">
+				<i class="icon iconfont icon-04 footer-icon"></i>
+				<span>我的</span>
+			</a>
+		</div>
+		<script src="../js/swiper.min.js"></script>
+		<script src="../js/jquery-2.2.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">	
+			$('#back').click(function() {
+				window.history.go(-1);
+			})
+			
+			$('.my-information-list span').click(function(){
+				$('.my-information-list span').removeClass('ca0000');
+				$(this).addClass('ca0000');
+			})
+		</script>
+	</body>
+
+</html>

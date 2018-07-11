@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/ionic.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../css/main.css" />
+		<script src="../js/jquery-2.2.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/ionic.bundle.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body ng-controller="PopupCtrl" class="Edit_body" style="background: #ddd;height:100vh">
+		<div class="bar bar-header bar-assertive Edit_header" style="border: none;background-size:0;">
+			<button class="button button-clear login_header_color" id="fanhui" id="Return">
+				<i class="ion-chevron-left" style="font-size:20px;"></i>
+				返回
+			</button>
+			<p class="title Edit_header_title" style="font-size: 20px;">设置</p>
+			
+		</div>
+		<div class="set">
+				<a href="###"><img class="img-set" src="../img/123.PNG"/><li style="line-height: 25px;padding-top: 5px;margin-left: 20px;"><p style="margin: 0;">会员编号：0001</p><p style="margin: 0;">手机号：15461241232</p></li></a>
+				<a href="###" class="set-text"><p>我的昵称</p><p>会员编号</p></a>
+				<a href="###" class="set-text"><p>实名认证</p><p>已认证</p></a>
+				<a href="###" class="set-text">关于贡寿官网</a>
+		</div>
+		
+		<h2 class="h2">退出登入</h2>
+		<style>
+			*{margin: 0 ;padding: 0;list-style: none;}
+			html{background: white;}
+			.title2{
+					color: white;
+				    display: block;
+   					position: absolute;
+    				right: 0;
+    				top: 0;
+    				z-index: 0;
+   					overflow: hidden;
+    				margin: 0 10px;
+    				min-width: 30px;
+    				height: 43px;
+    				text-align: center;
+   					text-overflow: ellipsis;
+   				 	white-space: nowrap;
+    				/*font-size: 17px;*/
+    				font-weight: 500;
+    				line-height: 44px;
+			}
+			.set{
+				width: 94%;
+				height: 80vh;
+				background: white;
+				margin:73px auto 15px auto;
+				border-radius: 6px;
+
+			}
+			.img-set{
+				width:60px;
+				height:60px;
+				border-radius: 50%;
+			}
+			.set>a{
+				padding: 10px;
+				display: flex;
+				border-bottom: 1px solid #ddd;
+			}
+			.set-text{
+				justify-content: space-between;
+				height: 60px;
+				line-height: 35px;
+			}
+			.h2{
+				text-align: center;margin: 0;background: white;border-radius: 6px;
+			}
+		</style>
+		<script>
+			$('#fanhui').click(function(){
+	        	window.location.href = document.referrer;
+	        })
+		
+		$('.E-btn').click(function(){
+			$('.E-btn').removeClass('button-assertive');
+			$(this).addClass('button-assertive');
+		})
+		
+		$('.Edit_recharge_delete_a').click(function(){
+			event.preventDefault();
+			$('.Edit_recharge_delete_a').css('color','black');
+			$(this).css('color','#CA0000');
+		})
+		angular.module('mySuperApp', ['ionic']).controller('PopupCtrl',function($scope, $ionicPopup, $timeout) {
+           //confirm 对话框
+            $scope.showConfirmFail = function() {
+             var confirmPopup = $ionicPopup.confirm({
+               title: '',
+               templateUrl: '', // String (可选)。在弹窗body内的html模板的URL。
+               scope: null, // Scope (可选)。一个链接到弹窗内容的scope（作用域）。
+               template: "<p class='icon ion-close-circled' style='color: #CA0000;; font-size:99px;text-align:center'></p><p style='text-align:center;font-size:12px'>很抱歉，支付失败！</p><p style='color:#c2c2c2;text-align:center;font-size:9px'>失败原因：1.密码错误 2.金额数字无效 3.余额不足</p><p style='color:#c2c2c2;text-align:center;font-size:9px'>以上原因都不是，<a href='#' style='color:#ca0000'>联系客服</a></p>",
+               buttons: [{ //Array[Object] (可选)。放在弹窗footer内的按钮。
+                            text: '取消',
+                            type: 'button-light',
+                           }, {
+                            text: '确定',
+                            type: 'button-assertive',
+                            }]
+             });
+             confirmPopup.then(function(res) {
+               if(res) {
+                 console.log('成功！');
+               } else {
+                 console.log('失败！');
+               }
+             });
+           }
+            
+            
+            //confirm 对话框
+            $scope.showConfirmSuccess = function() {
+             var confirmPopup = $ionicPopup.confirm({
+               title: '',
+               templateUrl: '', // String (可选)。在弹窗body内的html模板的URL。
+               scope: null, // Scope (可选)。一个链接到弹窗内容的scope（作用域）。
+               template: "<p class='icon ion-checkmark' style='color: #CA0000;; font-size:99px;text-align:center'></p><p style='text-align:center;font-size:12px'>恭喜你，付款成功！</p></p>",
+               buttons: [{ //Array[Object] (可选)。放在弹窗footer内的按钮。
+                            text: '取消',
+                            type: 'button-light',
+                           }, {
+                            text: '确定',
+                            type: 'button-assertive',
+                            }]
+             });
+             confirmPopup.then(function(res) {
+               if(res) {
+                 console.log('成功！');
+               } else {
+                 console.log('失败！');
+               }
+             });
+           }
+            
+            
+             var st="<script type='text/javascript'>var InputNum = document.getElementsByClassName('input_pass');  for(var i = 0; i<InputNum.length;i++){  InputNum[i].index = i;  InputNum[i].onkeyup=function(){ if(event.keyCode!=8){var next = this.index + 1; if(next > InputNum.length - 1) return;  InputNum[next].focus();}else{var pre=this.index-1;if(pre < 0) return;InputNum[pre].focus();}}}";
+             $scope.showConfirm_one= function() {
+             var confirmPopup_one = $ionicPopup.confirm({
+               title: '',
+               templateUrl: '', // String (可选)。在弹窗body内的html模板的URL。
+               scope: null, // Scope (可选)。一个链接到弹窗内容的scope（作用域）。
+               template: "<p class='text-center'>请输入您的密码</p><p class='text-center'><input type='password'  maxlength='1' class='input_pass'><input type='password' maxlength='1' class='input_pass'><input type='password' maxlength='1' class='input_pass'><input type='password' maxlength='1' class='input_pass'><input type='password' maxlength='1' class='input_pass'><input type='password' maxlength='1' class='input_pass'></p>"+st,
+               buttons: [{ //Array[Object] (可选)。放在弹窗footer内的按钮。
+                            text: '取消',
+                            type: 'button-light',
+                           }, {
+                            text: '确定',
+                            type: 'button-assertive',
+                            }]
+             });
+             confirmPopup_one.then(function(res) {
+               if(res) {
+                 console.log('成功！');
+               } else {
+                 console.log('失败！');
+               }
+             });
+           }
+             
+	    });
+		</script>
+	</body>
+</html>

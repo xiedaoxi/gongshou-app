@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html >
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/ionic.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/main.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/login.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/mobileSelect.css"/>
+		<script src="../../js/jquery-2.2.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/city.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/mobileSelect.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body style="max-width: 640px !important;">
+		<div class="bar bar-header bar-assertive login_heater">
+			<button class="button button-clear login_header_color" id="back"><i class="icon ion-chevron-left"></i></button>
+			<h1 class="title" style="font-size: 18px;font-weight: bold;">选择身高范围</h1>
+		</div>
+		<hr class="hrStyle" />
+		<div class="MainPage_Content my-information-list" style="background-color: #F1F1F1;">
+			<ul class="shengao" id="sel_height">
+			<li>身高</li>
+			<p class="text"></p>
+			<li style="display: flex;"><i class="icon ion-chevron-right" style="width:10px"></i></li>
+		</ul>
+<!--			<button class="button button-assertive button-full" value="">确定</button>-->
+		</div>
+		<style>
+			.shengao{
+	line-height: 60px;
+	height:60px;
+	margin: 10px 0;
+	background: white;
+	padding:  0 20px;
+	font-size: 20px;
+	display: flex;
+	justify-content: space-between;
+}
+.text{
+	position: relative;
+	top: 0%;
+	left:0%;
+	bottom: 0%;
+	right: 0%;
+	margin: auto;
+}
+		</style>
+		<script>
+		   $('#back').click(function(){
+		    	window.history.go(-1);
+		   })
+		    $('.button-light').click(function(){
+		   	  $('.button-light').removeClass('button-calm');
+		   	  $(this).addClass('button-calm');
+		   })
+		    
+		    //身高
+			var HeightArr = ['保密','1.5米以下', '1.5-1.6米','1.6-1.7米','1.7-1.8米','1.8-1.9米','1.9以上'];
+			var mobileSelect1 = new MobileSelect({
+				trigger: '#sel_height',
+				triggerDisplayData:false,
+				title: '身高',
+				wheels: [{
+					data: HeightArr
+				}],
+				position: [2], //初始化定位 打开时默认选中的哪个 如果不填默认为0
+				transitionEnd: function(indexArr, data) {
+					//console.log(data);
+				},
+				callback: function(indexArr, data) {
+					$('.text').text(data)
+				}
+			});
+		</script>
+	</body>
+
+</html>

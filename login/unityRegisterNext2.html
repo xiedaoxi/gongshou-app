@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/login.css" />
+		<link rel="stylesheet" type="text/css" href="../css/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/demo.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/ionic.min.css"/>
+		<script src="../js/jquery-2.2.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+        document.querySelector("html").style.fontSize = document.documentElement.clientWidth/375*50+"px";
+    </script>
+	</head>
+	<body>
+		<div class="login_content">
+			<div class="bar bar-header bar-assertive">
+				<button class="button button-clear" id="back"><i class="icon iconfont icon-fanhui1"></i></button>
+				<span class="title">单位注册</span>
+			</div>
+			<p class="unityRegisterSelect">（可选一项进行提交）</p>
+			<p class="unityRegisterBoxP">上传营业执照</p>
+			<div class="unityRegisterBox">
+				<img class="img-Company img-1" src="../img/white.png"/>
+				<input class="file my_img" type="file"  style="display:none;"/>
+                <button class="unityRegisterBoxButton">+</button>
+			</div>
+			<p class="unityRegisterBoxP">介绍信的照片</p>
+			<div class="unityRegisterBox">
+				<img class="img-Company img-2" src="../img/white.png"/>
+                <input class="file my_img" type="file"  style="display:none;"/>
+                <button class="unityRegisterBoxButton">+</button>
+			</div>
+			<style type="text/css">
+				.img-Company{
+					position: absolute;
+					top: 0;
+					z-index: 99;
+					width: 92vw;
+					height: 114px;
+				}
+			</style>
+			<div class="login_form Unitylogin_form">
+			    <input type="submit"  value="下一步" class="changePwd_formBtn"/>
+			    <p class="unityRegisterP">！温馨提示：注册成功后发布消息时不能含有联系方式</p>
+			</div>
+		</div>
+		<script src="../js/localResizeIMG.js"></script>
+    <script src="../js/mobileBUGFix.mini.js"></script>
+    <script src="../js/ResizeIMG.js"></script>
+		<script type="text/javascript">
+		      $('#back').click(function(){
+		    	window.history.go(-1);
+		    })
+		    $('.changePwd_formBtn').click(function(){
+		    	img1=$('.img-1').attr('src');
+		    	img2=$('.img-2').attr('src');
+		    		if(img1!='../img/white.png'&&img2!='../img/white.png'){
+		    			window.location.href='unityRegisterSuccess.html';
+		    	}
+				else{
+                       alert('不能为空！')
+                      }
+		    })
+//		    $('.img-Company').click(function(){
+//              $(this).siblings('.file').click();
+//              img=$(this);
+//          });	
+//          本地图片获取
+//			$(".file").change(function () {
+//      var fileObj = $(this)[0];  //console.log(fileObj)
+//      var windowURL = window.URL || window.webkitURL;
+//      //console.log(windowURL)
+//      if (fileObj && fileObj.files && fileObj.files[0]) {
+//          dataURL = windowURL.createObjectURL(fileObj.files[0]); //console.log(dataURL)
+//         
+//      }
+//      else {
+//          dataURL = $(this).val();
+//          // var imgObj = document.getElementById("preview");
+//          // imgObj.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";
+//          // imgObj.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = dataURL;
+//      }
+//      	$(img).attr('src', dataURL);
+//      	$(img).siblings('.unityRegisterBoxButton').hide()
+//  });
+//手机端获取相册和拍照	
+$(function () {
+            //上传图片!!!!!!!!!!!!!!!!!!!!
+             $('.img-Company').click(function(){
+                $(this).siblings('.file').click();
+                img=$(this);
+            });	
+            $('.my_img').ResizeIMG({
+                width: 100,
+                quality: 1.0,
+                success: function (result) {
+                    console.log(result);
+                    $(img).attr('src',result.base64)
+                }
+            });
+            var rem_width=parseInt($("body").css("width"))/7.5;
+            $(".yb-view").scrollLeft(1.44*rem_width);
+        });
+
+		</script>
+	</body>
+</html>

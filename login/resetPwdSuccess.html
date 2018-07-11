@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/login.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/demo.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/ionic.min.css"/>
+	</head>
+	<body>
+		<div class="login_content">
+			<div class="bar bar-header bar-assertive">
+				<button class="button button-clear" id="back"><i class="icon iconfont icon-fanhui1"></i></button>
+				<span class="title">重置密码成功</span>
+			</div>
+			<div class="login_successBox content has-header">
+				<div class="login_circle">
+					<span class="icon iconfont icon-duigou login_gougou"></span>
+				</div>
+				<span class="login_successBoxText">恭喜你：重置密码成功，请牢记新的登录密码！</span>
+				<div class="login_form login_formSucecess">
+			       <input type="submit"  value="去登陆" class="login_formBtn"/>
+			    </div>
+			</div>
+		</div>
+	<script src="../js/jquery-2.2.2.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        $('#back').click(function(){
+		    	window.history.go(-1);
+		    })
+    	$('.login_formBtn').click(function(){
+    		window.location.href='login.html';
+    	})
+    </script>
+	</body>
+</html>

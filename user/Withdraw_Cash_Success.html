@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/ionic.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../css/main.css" />
+		<script src="../js/jquery-2.2.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/ionic.bundle.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body ng-controller="PopupCtrl" class="Edit_body">
+		<div class="bar bar-header bar-assertive Edit_header">
+			<button class="button button-clear pull-left Edit_header_btn" id="fanhui" id="Return"><i class="icon iconfont icon-fanhui1"></i></button>
+			<h3 class="title Edit_header_title">提现详情</h3>
+		</div>
+		<div class="content has-header Edit_content">
+			<div class="list Edit_margin_top">
+				<div class="item">
+					<p class='icon ion-checkmark' style='color: #CA0000;; font-size:99px;text-align:center'></p>
+					<p style='text-align:center;font-size:16px'>恭喜你，申请提现成功！</p>
+					<p style='text-align:center;font-size:12px'>处理中，资金将在今天24点前到账</p>
+				</div>
+				<div class="item">
+		        	<div class="inline-block">提现金额</div><div class="inline-block float_right">600元</div>
+                </div>
+                <div class="item">
+		        	<div class="inline-block">手续费</div><div class="inline-block float_right">0元</div>
+                </div>
+                <div class="item">
+		        	<div class="inline-block">实扣金额</div><div class="inline-block float_right">600元</div>
+                </div>
+                <div class="item">
+		        	<div class="inline-block">提现方式 </div><div class="inline-block float_right">支付宝提现</div>
+                </div>
+                <div class="item">
+		        	<div class="inline-block">交易订单 </div><div class="inline-block float_right">49603184062099666384</div>
+                </div>
+			</div>
+		</div>
+		<!--底部-->
+		<div class="tabs tabs-icon-top footer-bar">
+			<a class="tab-item footer-L33" href="../index.html">
+				<i class="icon iconfont icon-shouye footer-icon"></i>
+				<span>首页</span>
+			</a>
+			<a class="tab-item footer-L33" href="#">
+				<i class="icon iconfont icon-zixun footer-icon"></i>
+				<span>资讯</span>
+			</a>
+			<a class="tab-item footer-L33" href="#">
+				<i class="icon iconfont icon-paperplane footer-icon"></i>
+				<span>发布信息</span>
+			</a>
+			<a class="tab-item footer-L33" href="#">
+				<i class="icon iconfont icon-jiaoyi footer-icon"></i>
+				<span>我的交易</span>
+			</a>
+			<a class="tab-item footer-L33 footer-active" href="User.html">
+				<i class="icon iconfont icon-04 footer-icon"></i>
+				<span>我的</span>
+			</a>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$('#fanhui').click(function(){
+	        	window.history.go(-1);
+	        })
+		
+		var InputNum = document.getElementsByClassName('input_pass');  
+		for(var i = 0; i<InputNum.length;i++){  
+			InputNum[i].index = i;  
+			InputNum[i].onkeyup=function(){ 
+				if(event.keyCode!=8){
+					var next = this.index + 1; 
+					if(next > InputNum.length - 1) 
+					return;  
+					InputNum[next].focus();
+				}else{
+					var pre=this.index-1;
+					if(pre < 0) 
+					return;
+					InputNum[pre].focus();
+				}
+				}}
+	</script>
+</html>

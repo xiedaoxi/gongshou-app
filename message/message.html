@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/main.css" />
+		<link rel="stylesheet" type="text/css" href="../css/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../css/ionic.min.css" />
+	</head>
+
+	<body>
+		<div class="bar bar-header bar-assertive login_heater">
+			<button class="button button-clear login_header_color" id="back"><i class="icon iconfont icon-fanhui1"></i></button>
+			<h1 class="title" style="font-size: 18px;font-weight: bold;">资讯列表</h1>
+		</div>
+		<div class="MainPage_NewList my-information-list" style="margin-top: 48px;">
+			<span class="ca0000" data-toggle='tab' data-target='#page1'>全部</span>
+			<span data-toggle='tab' data-target='#page2'>贡寿共享服务资讯</span>
+		</div>
+		<hr class="hrStyle" />
+		<div class="MainPage_Content tab-content">
+			<div class="tab-pane fade in active" id="page1">
+		    	<p style="height: 630px; display: flex;flex-direction: row;justify-content: center;align-items: center;font-size: 18px;">暂无资讯信息</p>
+			</div>
+		    <div class="tab-pane fade" id="page2">
+		    	<p style="height: 630px; display: flex;flex-direction: row;justify-content: center;align-items: center;font-size: 18px;">暂无贡寿共享服务信息</p>
+		    </div>
+		</div>  
+		<!--底部-->
+		<div class="tabs tabs-icon-top footer-bar">
+			<a class="tab-item footer-L33" href="../index.html">
+				<i class="icon iconfont icon-shouye footer-icon"></i>
+				<span>首页</span>
+			</a>
+			<a class="tab-item footer-L33 footer-active" href="message.html">
+				<i class="icon iconfont icon-zixun footer-icon"></i>
+				<span>资讯</span>
+			</a>
+			<a class="tab-item footer-L33" href="../publish/publish.html">
+				<i class="icon iconfont icon-paperplane footer-icon"></i>
+				<span>发布信息</span>
+			</a>
+			<a class="tab-item footer-L33" href="#">
+				<i class="icon iconfont icon-qiyeruzhu footer-icon"></i>
+				<span>入驻</span>
+			</a>
+			<a class="tab-item footer-L33" href="../user/User.html">
+				<i class="icon iconfont icon-04 footer-icon"></i>
+				<span>我的</span>
+			</a>
+		</div>
+		<script src="../js/swiper.min.js"></script>
+		<script src="../js/jquery-2.2.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">	
+			$('#back').click(function() {
+				window.history.go(-1);
+			})
+			
+			$('.my-information-list span').click(function(){
+				$('.my-information-list span').removeClass('ca0000');
+				$(this).addClass('ca0000');
+			})
+		</script>
+	</body>
+
+</html>

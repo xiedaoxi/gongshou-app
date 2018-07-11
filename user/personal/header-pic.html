@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/ionic.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/main.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css"/>
+		<script src="../../js/jquery-2.2.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/ionic.bundle.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body ng-controller="PopupCtrl" class="Edit_body">
+		<div class="bar bar-header bar-assertive Edit_header">
+			<button class="button button-clear pull-left Edit_header_btn" id="fanhui" id="Return"><i class="icon iconfont icon-fanhui1"></i></button>
+			<h3 class="title Edit_header_title">更换头像</h3>
+		</div>
+		<div class="content has-header" style="padding: 18px 3%;margin-bottom: 60px;">
+			<div class="list" style="min-height: 400px;background-color: white;text-align: center;">
+				<img src="../../img/123.PNG" style="width: 175px;height: auto;margin: 60px;" class="img-circle" />
+            </div> 
+            <form enctype="multipart/form-data">
+            	<input type="file" value="" class="hidden" id="upload_pic"/>
+			    <button class="button button-assertive button-full" value="" id="upload_btn">上传图片</button>
+            </form>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$('#fanhui').click(function() {
+			window.history.go(-1);
+		})
+		$('#upload_btn').click(function(){
+			$('#upload_pic').click();
+		})
+	</script>
+
+</html>

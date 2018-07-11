@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/login.css" />
+		<link rel="stylesheet" type="text/css" href="../css/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/demo.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/ionic.min.css"/>
+	</head>
+	<body>
+		<div class="login_content">
+			<div class="bar bar-header bar-assertive">
+				<button class="button button-clear" id="back"><i class="icon iconfont icon-fanhui1"></i></button>
+				<span class="title">注册</span>
+			</div>
+			<div class="login_form content has-header">
+				<input type="button" name="" id="personRegister" value="个人注册" class="login_formBtn login_formRegister" />
+				<input type="button" name="" id="unityRegister" value="单位注册" class="login_formBtn login_formRegister" />
+			</div>
+		</div>
+		<script src="../js/jquery-2.2.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+		    $('#back').click(function(){
+		    	window.history.go(-1);
+		    })
+			$('#personRegister').click(function(){
+				window.location.href='personRegister.html';
+			})
+			$('#unityRegister').click(function(){
+				window.location.href='unityRegisterNext1.html';
+			})
+		</script>
+	</body>
+</html>

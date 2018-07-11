@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/ionic.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/main.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/bootstrap-select.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/demo.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/login.css"/>
+		<script src="../../js/jquery-2.2.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/ionic.bundle.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/city.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/picker.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body style="max-width: 640px !important;">
+		<div class="bar bar-header bar-assertive login_heater">
+			<button class="button button-clear login_header_color" id="back"><i class="icon ion-chevron-left"></i></button>
+			<h1 class="title" style="font-size: 18px;font-weight: bold;">血型</h1>
+		</div>
+		<hr class="hrStyle" />
+		<div class="MainPage_Content my-information-list" style="background-color: #F1F1F1;">
+			<button class="button button-block button-light" value="">A</button>
+		    <button class="button button-block button-light" value="">B</button>
+		    <button class="button button-block button-light" value="">O</button>
+		    <button class="button button-block button-light" value="">AB</button>
+			<button class="button button-assertive button-full" value="">确定</button>
+		</div>
+		<script src="js/jquery-2.2.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+		   $('#back').click(function(){
+		    	window.history.go(-1);
+		   })
+		    $('.button-light').click(function(){
+		   	  $('.button-light').removeClass('button-calm');
+		   	  $(this).addClass('button-calm');
+		   })
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/login.css" />
+		<link rel="stylesheet" type="text/css" href="../css/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/demo.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/ionic.min.css"/>
+	</head>
+	<body>
+		<div class="login_content">
+			<div class="bar bar-header bar-assertive">
+				<button class="button button-clear" id="back"><i class="icon iconfont icon-fanhui1"></i></button>
+				<span class="title">登录</span>
+			</div>
+			<div class="login_form content has-header">
+				<input type="text" name="username" id="username" placeholder="请输入会员编号/手机号" />
+				<input type="text" name="password" id="password" placeholder="请输入密码" />
+			    <input type="submit"  value="立即登陆" class="login_formBtn"/>
+			    <div class="login_footer">
+				    <a id="ForgetPwd">忘记密码?</a>
+			        <a id="register">注册</a>
+			    </div>
+			</div>
+			<div style="text-align: center;margin-top: 99px;">
+				<i class="icon iconfont icon-weixin" style="color: darkgreen;font-size: 30px;"></i>
+                    <div class="name" style="font-size: 8px;color: gray;">微信登录</div>
+                </i>
+			</div>
+		</div>
+		<script src="../js/jquery-2.2.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+		    $('#back').click(function(){
+		    	window.history.go(-1);
+		    })
+			$('#ForgetPwd').click(function(){
+				window.location.href='resetPwd1.html';
+			});
+			$('#register').click(function(){
+				window.location.href='register.html';
+			});
+			$(':submit').click(function(){
+				window.location.href='../index.html';
+			});
+		</script>
+	</body>
+</html>

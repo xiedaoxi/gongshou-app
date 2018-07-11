@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/ionic.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../css/main.css" />
+		<script src="../js/jquery-2.2.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/ionic.bundle.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body ng-controller="PopupCtrl" class="Edit_body">
+		<div class="bar bar-header bar-assertive Edit_header">
+			<button class="button button-clear pull-left Edit_header_btn" id="fanhui" id="Return"><i class="icon iconfont icon-fanhui1"></i></button>
+			<h3 class="title Edit_header_title">支付宝提现</h3>
+		</div>
+		<div class="content has-header" style="margin-top: 30px;">
+			<div class="Edit_content_list">
+				<div class="list">
+                    <label class="item item-input">
+                       <span class="input-label User-Gray">支付宝账户：</span>
+                       <input type="text" name="" id="" value="" />
+                    </label>
+                    <label class="item item-input item-icon-right" href="name.html">
+                       <span class="input-label User-Gray">支付宝姓名：</span>
+                       <input type="text" name="" id="" value="" />
+                    </label>
+                    <label class="item item-input item-icon-right" href="name.html">
+                       <span class="input-label User-Gray">提现金额：</span>
+                       <input type="text" name="" id="" value="" />
+                    </label>
+					<div class="item Edit_content_listitem">
+						<p class="Cash_tip">本次提现免手续费</p>
+						<p>余额<span class="Cash_tip_color" id="all_money">900</span>
+							<a id="all" class="Cash_tip_color">全部提现</a>
+						</p>
+					</div>
+					<div class="item item-input Edit_content_listitem">
+						<div class="col-20"></div>
+						<button class="button button-assertive button-small col-25">取消</button>
+						<div class="col-10"></div>
+						<button class="button button-assertive button-small col-25" id="next">下一步</button>
+						<div class="col-20"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--底部-->
+		<div class="tabs tabs-icon-top footer-bar">
+			<a class="tab-item footer-L33" href="../index.html">
+				<i class="icon iconfont icon-shouye footer-icon"></i>
+				<span>首页</span>
+			</a>
+			<a class="tab-item footer-L33" href="#">
+				<i class="icon iconfont icon-zixun footer-icon"></i>
+				<span>资讯</span>
+			</a>
+			<a class="tab-item footer-L33" href="#">
+				<i class="icon iconfont icon-paperplane footer-icon"></i>
+				<span>发布信息</span>
+			</a>
+			<a class="tab-item footer-L33" href="#">
+				<i class="icon iconfont icon-qiyeruzhu footer-icon"></i>
+				<span>入驻</span>
+			</a>
+			<a class="tab-item footer-L33 footer-active" href="User.html">
+				<i class="icon iconfont icon-04 footer-icon"></i>
+				<span>我的</span>
+			</a>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$('#fanhui').click(function() {
+			window.history.go(-1);
+		})
+
+		var InputNum = document.getElementsByClassName('input_pass');
+		for(var i = 0; i < InputNum.length; i++) {
+			InputNum[i].index = i;
+			InputNum[i].onkeyup = function() {
+				if(event.keyCode != 8) {
+					var next = this.index + 1;
+					if(next > InputNum.length - 1)
+						return;
+					InputNum[next].focus();
+				} else {
+					var pre = this.index - 1;
+					if(pre < 0)
+						return;
+					InputNum[pre].focus();
+				}
+			}
+		}
+		$('#next').click(function() {
+			window.location.href = 'Withdraw_Cash_Success.html';
+		})
+
+	</script>
+
+</html>

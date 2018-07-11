@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/ionic.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../css/main.css" />
+		<script src="../js/jquery-2.2.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/ionic.bundle.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body ng-controller="PopupCtrl" class="Edit_body">
+		<div class="bar bar-header bar-assertive Edit_header">
+			<button class="button button-clear pull-left Edit_header_btn" id="fanhui" id="Return"><i class="icon iconfont icon-fanhui1"></i></button>
+			<h3 class="title Edit_header_title">余额提现</h3>
+		</div>
+		<div class="content has-header" style="margin-top: 30px;">
+			<div class="Edit_content_list">
+				<div class="list">
+					<div class="item">提现方式：</div>
+					<div class="item item-input Edit_content_listitem" style="height: 200px;width: 100%;；display: flex;flex-direction: row;align-items: center;justify-content: space-around;">
+						<a style="text-align: center;" href="weixin-cash.html">
+							<i class="icon iconfont icon-weixin" style="font-size: 54px;color: forestgreen;"></i>
+							<div class="name" style="padding: 3px 0;font-size: 12px">微信</div>
+						</a>
+						<a style="text-align: center;color: #1196db;" href="zhifubao-cash.html">
+							<i class="icon iconfont icon-zhifubao" style="font-size: 54px;"></i>
+							<div class="name" style="color: #444;font-size: 12px;padding: 3px 0;">支付宝</div>
+					    </a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--底部-->
+		<div class="tabs tabs-icon-top footer-bar">
+			<a class="tab-item footer-L33" href="../index.html">
+				<i class="icon iconfont icon-shouye footer-icon"></i>
+				<span>首页</span>
+			</a>
+			<a class="tab-item footer-L33" href="#">
+				<i class="icon iconfont icon-zixun footer-icon"></i>
+				<span>资讯</span>
+			</a>
+			<a class="tab-item footer-L33" href="#">
+				<i class="icon iconfont icon-paperplane footer-icon"></i>
+				<span>发布信息</span>
+			</a>
+			<a class="tab-item footer-L33" href="#">
+				<i class="icon iconfont icon-qiyeruzhu footer-icon"></i>
+				<span>入驻</span>
+			</a>
+			<a class="tab-item footer-L33 footer-active" href="User.html">
+				<i class="icon iconfont icon-04 footer-icon"></i>
+				<span>我的</span>
+			</a>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$('#fanhui').click(function() {
+			window.history.go(-1);
+		})
+
+		var InputNum = document.getElementsByClassName('input_pass');
+		for(var i = 0; i < InputNum.length; i++) {
+			InputNum[i].index = i;
+			InputNum[i].onkeyup = function() {
+				if(event.keyCode != 8) {
+					var next = this.index + 1;
+					if(next > InputNum.length - 1)
+						return;
+					InputNum[next].focus();
+				} else {
+					var pre = this.index - 1;
+					if(pre < 0)
+						return;
+					InputNum[pre].focus();
+				}
+			}
+		}
+	</script>
+
+</html>

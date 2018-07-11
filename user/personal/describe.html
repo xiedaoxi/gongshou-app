@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/ionic.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/main.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/bootstrap-select.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/demo.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/login.css"/>
+		<script src="../../js/jquery-2.2.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/ionic.bundle.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/city.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/picker.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body style="max-width: 640px !important;">
+		<div class="bar bar-header bar-assertive Edit_header" sstyle="border: none;background-size:0;">
+			<button class="button button-clear login_header_color" id="fanhui" id="Return">
+				<i class="ion-chevron-left" style="font-size:20px;"></i>
+			</button>
+			<h4 class="Detailed" style="font-size: 20px;">个人描述</h4>
+		</div>
+		<div class="description">
+			<p>流过泪的眼睛更明亮，滴过血的心灵更坚强，总想要表现得像一只鸭子那般在水面上保持着冷静，水面下拼命划水</p>
+			<span></span>
+		</div>
+		<style>
+			html{background: white;}
+			.title2{
+					color: white;
+				    display: block;
+   					position: absolute;
+    				right: 0;
+    				top: 0;
+    				z-index: 0;
+   					overflow: hidden;
+    				margin: 0 10px;
+    				min-width: 30px;
+    				height: 43px;
+    				text-align: center;
+   					text-overflow: ellipsis;
+   				 	white-space: nowrap;
+    				/*font-size: 17px;*/
+    				font-weight: 500;
+    				line-height: 44px;
+			}
+			.Member{margin-top:43px;padding: 10px 30px;background:#ef473a;}
+			.Member>h3{font-size: 17px;color:white;}
+			.Member>h1{color:white;}
+			/*.Update-instructions{padding:5px 0 5px 0;color:#fb3d3d;font-size:8px;}*/
+			/*按钮*/
+			.btn{
+				margin: 4px;min-height:30px;line-height: 43px;
+			}
+		.Rank-record{
+			padding: 3px 0;
+			width: 96%;
+			margin:0 auto;
+			margin-top:43px ;
+		}
+		.Rank-record>div{
+			height: 79px;
+			box-sizing: border-box;
+			margin: 10px 0;
+			padding:0 0 10px 0 ;
+			border-bottom: 1px solid #ddd;
+		}
+		.Rank-record p{margin: 0;}
+		.Payment-record{
+			font-size: 14px;
+			color: #ADADAD;
+		}
+		.Detailed{
+			height: 44px;
+			line-height: 44px;
+			display: flex;
+			position: relative;
+			top: 50%;
+			left: 50%;
+			margin-left:-44px;
+			margin-top: -22px;
+			color: white;
+			
+		}
+		.description{
+		width:92%;	
+		position: relative;
+		height: 300px;
+		margin: 63px auto 0 auto;
+		border-radius: 6px;
+		padding: 30px 5px 0 5px;
+		font-size: 17px;
+		background: white;
+		text-indent: 2em;
+		}
+		.description>p{
+			line-height: 25px;
+		}
+		.description>span{
+			position: absolute;
+			bottom: 15px;
+			right: 15px;
+		}
+		</style>
+		<script>
+			$('#fanhui').click(function(){
+	        	window.location.href = document.referrer;
+	        })
+		
+		$('.E-btn').click(function(){
+			$('.E-btn').removeClass('button-assertive');
+			$(this).addClass('button-assertive');
+		})
+		
+		$('.Edit_recharge_delete_a').click(function(){
+			event.preventDefault();
+			$('.Edit_recharge_delete_a').css('color','black');
+			$(this).css('color','#CA0000');
+		})
+	$(function(){
+		$('.description>span').text($('.description>p').text().length)
+	})
+
+		</script>
+	</body>
+
+</html>

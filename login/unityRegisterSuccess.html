@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/login.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/demo.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/ionic.min.css"/>
+	</head>
+	<body>
+		<div class="login_content">
+			<div class="bar bar-header bar-assertive">
+				<button class="button button-clear" id="back"><i class="icon iconfont icon-fanhui1"></i></button>
+				<span class="title">单位注册成功</span>
+			</div>
+			<div class="login_successBox content has-header">
+				<div class="login_circle">
+					<span class="icon iconfont icon-duigou login_gougou"></span>
+				</div>
+				<span class="login_UnityRegisterSuccess">恭喜你，注册成功！</span>
+			    <p class="login_UnityRegisterSuccessText">尊敬的会员，您好！你的会员编号为：</p>
+			    <p class="login_UnityRegisterSuccessText">
+					<span><span class="login_UnityRegisterSuccessTextG">G</span>44098311234567</span>
+				</p>
+			    <div class="login_form login_formSucecess">
+			        <input type="submit"  value="立即登陆" class="login_formBtn"/>
+			        <p class="login_UnityRegisterSuccessTip">注：此编号是您在本站的身份编号，非常重要，请牢记！</p>
+			    </div>
+			</div>
+		</div>
+	<script src="../js/jquery-2.2.2.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        $('#back').click(function(){
+		    	window.history.go(-1);
+		    })
+    	$('.login_formBtn').click(function(){
+    		window.location.href='login.html';
+    	})
+    </script>
+	</body>
+</html>

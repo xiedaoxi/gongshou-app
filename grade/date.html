@@ -1,0 +1,382 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/ionic.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../css/main.css" />
+		<link rel="stylesheet" type="text/css" href="../css/mobileSelect.css"/>
+		<script src="../js/jquery-2.2.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/date.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/ionic.bundle.min.js" type="text/javascript" charset="utf-8"></script>
+			<script src="../js/city.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/picker.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body class="Edit_body" style="background: white;">
+		
+			<!--日期-->
+			<div class="riqi">
+				<div class="day-month">
+					按<span class="kong">月</span><span class="span-hide">日</span>选择
+					<i class="icon iconfont icon-qiehuan2" style='margin-left:5px ;'></i>
+				</div>
+			<!--按月-->
+				<div id="yue">
+					<ul>
+						<li class="li li-style arr">本月</li>
+					</ul>
+						<div class="item item-icon-right" style="border:none;margin-top: 20px;"><i class="icon ion-trash-a" style="font-size:25px"></i></div>
+				</div>
+				<div id="ri" style="display: none;">
+					<ul>
+						<li class="li li-style arr">开始</li>
+						<li style="width:50px" class="hide">至</li>
+						<li class="li hide end">结束</li>
+					</ul>
+						<div class="item item-icon-right" style="border:none;margin-top: 20px;"><i class="icon ion-trash-a" style="font-size:25px"></i></div>
+				</div>
+			</div>
+		<style>
+		
+			.span-hide{display: none;}
+			#main{
+				display: none;
+			}
+			p{margin: 0;}
+			html{background: white;}
+			.title2{
+					color: white;
+				    display: block;
+   					position: absolute;
+    				right: 0;
+    				top: 0;
+    				z-index: 0;
+   					overflow: hidden;
+    				margin: 0 10px;
+    				min-width: 30px;
+    				height: 43px;
+    				text-align: center;
+   					text-overflow: ellipsis;
+   				 	white-space: nowrap;
+    				/*font-size: 17px;*/
+    				font-weight: 500;
+    				line-height: 44px;
+			}
+			.Member{margin-top:43px;padding: 10px 30px;background:#ef473a;}
+			.Member>h3{font-size: 17px;color:white;}
+			.Member>h1{color:white;}
+			/*.Update-instructions{padding:5px 0 5px 0;color:#fb3d3d;font-size:8px;}*/
+			/*按钮*/
+			.btn{
+				margin: 4px;min-height:30px;line-height: 43px;
+			}
+		.Rank-record{
+			padding: 3px 0;
+			width: 96%;
+			margin:0 auto;
+			
+		}
+		.Rank-record>div{
+			/*height: 79px;*/
+			box-sizing: border-box;
+			margin: 10px 0;
+			padding:0 0 10px 0 ;
+			
+		}
+		.Rank-record>div>div{border-bottom: 1px solid #ddd;padding: 10px 0;}
+		.Rank-record p{margin: 0;}
+		.Payment-record{
+			font-size: 14px;
+			color: #ADADAD;
+		}
+		.img-income{		
+			width:50px;
+			height: 60px;
+			border-radius: 50%;
+			margin-right: 10px;
+		}
+		.income{
+			display: flex;
+			justify-content: space-between;
+			height:60px;
+			line-height: 60px;
+			padding:0 20px;
+			background: #F1F1F1;
+		}
+		.income>div{
+			padding: 10px 0;
+		}
+		.income>div>p{
+			line-height: 20px;
+		}
+		.guojia{
+		color:#ddd;
+		line-height: 40px;
+	height:40px;
+	margin: 10px 0 0 0;
+	margin-top:43px ;
+	background: white;
+	border:#ddd 1px solid;
+	padding:  0 50px;
+	display: flex;
+}
+/*日期*/
+.riqi{
+	width: 100vw;
+	position: absolute;
+	top: 0;
+	z-index: 999;
+	height: 100vh;
+	background: white;
+}
+
+.day-month{
+	margin: 68px 20px 25px 20px;
+	width: 120px;
+	height: 30px;
+	line-height:27px;
+	border:1px solid #A2A2A2;
+	text-align: center;
+	background:#F0F0F0;
+	border-radius: 20px;
+}
+.hide{
+	display: none;
+}
+/*月*/
+#yue,#ri{
+	padding: 0 10px;
+}
+#yue>ul,#ri>ul{
+	display:flex;
+	height: 50px;
+	font-size:20px;
+	line-height: 50px;
+	justify-content: space-between;
+}
+#yue>ul>li,#ri>ul>li{
+	text-align: center;
+}
+#yue>ul>.li,#ri>ul>.li{
+	border-bottom:1px solid #ddd;
+	flex-grow: 1;
+}
+.li-style{
+	color: #5BC0DE;
+	border-bottom:1px solid #5BC0DE !important;
+}
+.grayLayer{
+	display: none !important;
+}
+.content{
+	top:250px !important;
+}
+.btnBar{
+	width: 100vw;
+	display: flex !important;
+	justify-content: space-between !important;
+	position: fixed !important;
+	top:0px !important;
+}
+.fixWidth{
+	position: static !important;
+}
+/*.panel{
+	display: none !important;
+}*/
+		</style>
+		<script>
+			$('#fanhui').click(function(){
+	        	window.location.href = document.referrer;
+	        })
+		
+		$('.E-btn').click(function(){
+			$('.E-btn').removeClass('button-assertive');
+			$(this).addClass('button-assertive');
+		})
+		
+		$('.Edit_recharge_delete_a').click(function(){
+			event.preventDefault();
+			$('.Edit_recharge_delete_a').css('color','black');
+			$(this).css('color','#CA0000');
+		})
+//		日期切换
+$('.day-month').click(function(){
+	$(".day-month>span").toggleClass('span-hide');
+	$(".hide").toggle();
+	$("#yue,#ri").toggle();
+	$('#yue .arr').text('本月');
+	$('#ri .arr').text('开始');
+	$('#ri .end').text('结束');
+})
+$(function(){
+	$('.panel').hide();
+})
+$('#yue .li,#ri>ul').click(function(){
+	$('.panel').show();
+})
+$('#yue i').click(function(){
+	$('.panel').hide();
+	$('#yue .arr').text('本月')
+})
+$('#ri i').click(function(){
+	$('.panel').hide();
+	$('#ri .arr').text('开始')
+	$('#ri .end').text('结束')
+})
+$('.li').click(function(){
+	$(this).addClass('li-style').siblings('.li').removeClass('li-style');
+})
+//时间获取
+
+//小日
+var arrRi2=[];
+ri2='';
+for(var i=1;i<31;i++){
+	ri2=i;
+	arrRi2.push({id:ri2,value:ri2+'日'});
+//	console.log(arrRi2)
+}
+//特殊日大
+var arrRi3=[];
+ri3='';
+for(var i=1;i<30;i++){
+	ri3=i;
+	arrRi3.push({id:ri3,value:ri3+'日'});
+//	console.log(arrRi3)
+}
+//特殊日小
+var arrRi4=[];
+ri4='';
+for(var i=1;i<29;i++){
+	ri4=i;
+	arrRi4.push({id:ri4,value:ri4+'日'});
+//	console.log(arrRi4)
+}
+//大日
+var arrRi1=[];
+ri='';
+for(var i=1;i<32;i++){
+	ri=i;
+	arrRi1.push({id:ri,value:ri+'日'});
+//	console.log(arrRi1)
+}
+//当前过了多少月份 
+yue2='';
+var arrYue2=[];
+for(var i=1;i<new Date().getMonth()+2;i++){
+	yue2=i;
+	arrYue2.push({id:yue2,value:yue2+'月'});
+//	console.log(arrYue2)
+}
+//12个月
+var arrYue=[];
+yue='';
+	for(var i=1;i<13;i++){
+	yue=i;
+	arrYue.push({id:yue,value:yue+'月'});
+}
+var cs=false;
+	$('.day-month').click(function(){
+		cs=!cs;
+	if(cs){
+		arrYue.splice(0,arrYue.length);
+		arrYue2.splice(0,arrYue2.length);
+		for(var i=1;i<13;i++){
+	yue=i;
+	arrYue.push({id:yue,value:yue+'月',childs:arrRi1});
+
+}
+		//	当月
+	for(var i=1;i<new Date().getMonth()+2;i++){
+	yue2=i;
+	arrYue2.push({id:yue2,value:yue2+'月',childs:arrRi1});
+//	console.log(arrYue2)
+}
+	}else{
+		arrYue.splice(0,arrYue.length);
+		arrYue2.splice(0,arrYue2.length);
+		for(var i=1;i<13;i++){
+	yue=i;
+	arrYue.push({id:yue,value:yue+'月'});
+//		console.log(arrYue)
+}
+		//	当月
+	for(var i=1;i<new Date().getMonth()+2;i++){
+	yue2=i;
+	arrYue2.push({id:yue2,value:yue2+'月'});
+//	console.log(arrYue2)
+}
+	}
+//		console.log(cs);
+	})
+
+//2016到当前年
+abc=[{id:'1',value:'2月'}]
+var arrNian=[];
+nian='';
+for(var i=2016;i<new Date().getFullYear()+1;i++){
+	nian=i;
+	arrNian.push({id:nian,value:nian+'年',childs:arrYue});
+
+//		console.log(arrNian)
+//		console.log(arrYue)
+}
+	a=arrNian[arrNian.length-1].value;
+		if(a==new Date().getFullYear()+'年'){
+			arrNian[arrNian.length-1].childs= arrYue2;
+		}
+	console.log(a)
+//默认轮子位置
+var	end=false;
+$('#ri .arr').click(function(){
+	end=true;
+	console.log(end)
+})
+$('#ri .end').click(function(){
+	end=false;
+	console.log(end)
+})
+var lun=new Date().getFullYear()-2016;
+			var mobileSelect1 = new MobileSelect({
+				trigger: '.arr',
+				title:'日期',
+				wheels: [
+				{data:arrNian
+				}
+                ],
+				position: [0], //初始化定位 打开时默认选中的哪个 如果不填默认为0
+				transitionEnd: function(indexArr, data) {
+					$('#yue .arr').text(data[0].value+data[1].value)
+					if(end==false){
+						if(data.length==3){
+						$('#ri .end').text(data[0].value+data[1].value+data[2].value)
+					}
+					}else{
+						if(data.length==3){
+						$('#ri .arr').text(data[0].value+data[1].value+data[2].value)
+					}
+					}
+					console.log(data);
+				},			
+				callback: function(indexArr,data) {
+					$('.li-style').click(function(){})
+					location.href='income.html';
+					if(data.length==2){
+						localStorage.da=data[0].value+data[1].value;
+					}else{
+						localStorage.da=$('#ri .arr').text()+' - '+$('#ri .end').text();
+					}
+//					console.log(data);
+				}
+			});
+			mobileSelect1.show();
+				
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/ionic.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/main.css" />
+		<script src="../../js/jquery-2.2.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/ionic.bundle.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body ng-controller="PopupCtrl" class="Edit_body">
+		<div class="bar bar-header bar-assertive Edit_header">
+			<button class="button button-clear pull-left Edit_header_btn" id="fanhui"  id="Return"><i class="icon iconfont icon-fanhui1"></i></button>
+			<h3 class="title Edit_header_title">修改资料</h3>
+			<a href="personal-data.html">完成</a>
+		</div>
+		<style type="text/css">
+			.bar>a{
+				font-size: 19px;
+    			line-height: 44px;
+    			    position: absolute;
+    				top: 0px;
+    				right: 15px;
+    				color:white;
+    			}
+		</style>
+		<div class="content has-header" style="padding: 18px 3%;">
+			<div class="list">
+                <label class="item item-input">
+                    <span class="input-label User-Gray">会员编号</span>
+                    <span class="User-color">888888</span>
+                </label>
+                <a class="item item-input item-icon-right" href="name.html">
+                    <span class="input-label">称呼</span>
+                    <span class="User-color">总工程师</span>
+                    <i class="icon ion-ios-arrow-right"></i>
+                </a>
+                <a class="item item-input item-icon-right" href="adress.html">
+                    <span class="input-label">性别</span>
+                    <span class="User-color">男</span>
+                </a>
+                <a class="item item-input item-icon-right" href="../../grade/Location.html">
+                    <span class="input-label">所在地</span>
+                    <span class="User-color">广东-广州</span>
+                    <i class="icon ion-ios-arrow-right"></i>
+                </a>
+                <a class="item item-input item-icon-right" href="age.html">
+                    <span class="input-label">年龄</span>
+                    <span class="User-color">保密</span>
+                    <i class="icon ion-ios-arrow-right"></i>
+                </a>
+                <a class="item item-input item-icon-right" href="height.html">
+                    <span class="input-label">身高</span>
+                    <span class="User-color">保密</span>
+                    <i class="icon ion-ios-arrow-right"></i>
+                </a>
+                <a class="item item-input item-icon-right" href="marry.html">
+                    <span class="input-label">婚史</span>
+                    <span class="User-color">未婚</span>
+                    <i class="icon ion-ios-arrow-right"></i>
+                </a>
+                <a class="item item-input item-icon-right" href="school.html">
+                    <span class="input-label">学历</span>
+                    <span class="User-color">大专</span>
+                    <i class="icon ion-ios-arrow-right"></i>
+                </a>
+                <a class="item item-input item-icon-right" href="money.html">
+                    <span class="input-label">月薪范围</span>
+                    <span class="User-color">保密</span>
+                    <i class="icon ion-ios-arrow-right"></i>
+                </a>
+                <a class="item item-input item-icon-right" href="housing.html">
+                    <span class="input-label">住房情况</span>
+                    <span class="User-color">保密</span>
+                    <i class="icon ion-ios-arrow-right"></i>
+                </a>
+                <a class="item item-input item-icon-right" href="profession.html">
+                    <span class="input-label">职业</span>
+                    <span class="User-color">网站建设</span>
+                    <i class="icon ion-ios-arrow-right"></i>
+                </a>
+                <a class="item item-input item-icon-right" href="nation.html">
+                    <span class="input-label">民族</span>
+                    <span class="User-color">汉族</span>
+                    <i class="icon ion-ios-arrow-right"></i>
+                </a>
+                <a class="item item-input item-icon-right" href="blood.html">
+                    <span class="input-label">血型</span>
+                    <span class="User-color">o型</span>
+                    <i class="icon ion-ios-arrow-right"></i>
+                </a>
+                <a class="item item-input item-icon-right" href="constellation.html">
+                    <span class="input-label">星座</span>
+                    <span class="User-color">处女座</span>
+                    <i class="icon ion-ios-arrow-right"></i>
+                </a>
+                <a class="item item-input item-icon-right" href="twelve.html">
+                    <span class="input-label">生肖</span>
+                    <span class="User-color">猪</span>
+                    <i class="icon ion-ios-arrow-right"></i>
+                </a>
+                <a class="item item-input item-icon-right" href="children.html">
+                    <span class="input-label">有无子女</span>
+                    <span class="User-color">有</span>
+                    <i class="icon ion-ios-arrow-right"></i>
+                </a>
+                <a class="item item-input item-icon-right" style="height: 100px;" href="describe.html">
+                    <span class="input-label">个人描述</span>
+                    <p class="User-color" style="width: 50%;white-space:normal;">流过泪的眼睛更明亮，滴过血的心灵更坚强，总想要表现得像一只鸭子那般在水面上保持沉着冷静，水面下拼命划水。</p>
+                    <i class="icon ion-ios-arrow-right"></i>
+                </a>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+	    $('#fanhui').click(function(){
+	        	window.history.go(-1);
+	        })
+	</script>
+</html>

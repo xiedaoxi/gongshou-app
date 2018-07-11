@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html >
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/ionic.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/main.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/login.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/mobileSelect.css"/>
+		<script src="../../js/jquery-2.2.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/city.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/mobileSelect.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body style="max-width: 640px !important;">
+		<div class="bar bar-header bar-assertive login_heater">
+			<button class="button button-clear login_header_color" id="back"><i class="icon ion-chevron-left"></i></button>
+			<h1 class="title" style="font-size: 18px;font-weight: bold;">请选择出生日期</h1>
+		</div>
+		<hr class="hrStyle" />
+		<div class="MainPage_Content my-information-list" style="background-color: #F1F1F1;">
+			<ul class="nianling" id="nianling">
+			<li>年龄</li>
+			<p class="text"></p>
+			<li style="display: flex;"><i class="icon ion-chevron-right" style="width:10px"></i></li>
+		</ul>
+		<ul class="xingzuo" id="xingzuo">
+			<li>星座</li>
+			<p class="text2"></p>
+			<li style="display: flex;"><i class="icon ion-chevron-right" style="width:10px"></i></li>
+		</ul>
+		<ul class="shengxiao" id="shengxiao">
+			<li>生肖</li>
+			<p class="text3"></p>
+			<li style="display: flex;"><i class="icon ion-chevron-right" style="width:10px"></i></li>
+		</ul>
+		</div>
+		<style>
+			.nianling,.xingzuo,.shengxiao{
+	line-height: 60px;
+	height:60px;
+	margin: 10px 0;
+	background: white;
+	padding:  0 20px;
+	font-size: 20px;
+	display: flex;
+	justify-content: space-between;
+}
+.text,.text2,.text3{
+	position: relative;
+	top: 0%;
+	left:0%;
+	bottom: 0%;
+	right: 0%;
+	margin: auto;
+}
+		</style>
+		<script>
+		   $('#back').click(function(){
+		    	window.history.go(-1);
+		   })
+		    $('.button-light').click(function(){
+		   	  $('.button-light').removeClass('button-calm');
+		   	  $(this).addClass('button-calm');
+		   })
+		   //年龄
+			var ageArr = [];
+			for(var i = 18; i < 100; i++) {
+				ageArr.push(i+'岁');
+			}
+			var mobileSelect1 = new MobileSelect({
+				trigger: '#nianling',
+				title: '年龄',
+				triggerDisplayData:false,
+				wheels: [{
+					data: ageArr
+				}],
+				position: [2], //初始化定位 打开时默认选中的哪个 如果不填默认为0
+				transitionEnd: function(indexArr, data) {
+					//console.log(data);
+				},
+				callback: function(indexArr, data) {
+					$('.text').text(data)
+					console.log(data);
+				}
+			});
+			
+			 //星座
+			var ageArr2 = ['保密','摩羯座Capricorn', '水瓶座Aquarius','双鱼座Pisces','白羊座Aries','金牛座Taurus','双子座Gemini','巨蟹座Cancer','狮子座Leo',' 处女座Virgo','天秤座Libra','天蝎座Scorpio','射手座Sagittarius'];
+			var mobileSelect1 = new MobileSelect({
+				trigger: '#xingzuo',
+				title: '年龄',
+				triggerDisplayData:false,
+				wheels: [{
+					data: ageArr2
+				}],
+				position: [2], //初始化定位 打开时默认选中的哪个 如果不填默认为0
+				transitionEnd: function(indexArr, data) {
+					//console.log(data);
+				},
+				callback: function(indexArr, data) {
+					$('.text2').text(data)
+					console.log(data);
+				}
+			});
+
+ //生肖
+			var ageArr3 = ['保密','鼠', '牛','虎','兔','龙','蛇','马','羊','猴','鸡','狗','猪'];
+			var mobileSelect1 = new MobileSelect({
+				trigger: '#shengxiao',
+				title: '年龄',
+				triggerDisplayData:false,
+				wheels: [{
+					data: ageArr3
+				}],
+				position: [2], //初始化定位 打开时默认选中的哪个 如果不填默认为0
+				transitionEnd: function(indexArr, data) {
+					//console.log(data);
+				},
+				callback: function(indexArr, data) {
+					$('.text3').text(data)
+					console.log(data);
+				}
+			});
+		</script>
+	</body>
+
+</html>

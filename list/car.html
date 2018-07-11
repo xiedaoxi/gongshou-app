@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html ng-app="information-App">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/ionic.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/main.css" />
+		<link rel="stylesheet" type="text/css" href="../css/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../css/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap-select.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/demo.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/login.css"/>
+		<script src="../js/jquery-2.2.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/ionic.bundle.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/city.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/picker.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.M-C-UserImg{
+				border-radius: 50%;
+				height: 45px;
+				padding: 0;
+				margin: 12px 0 0 2px ;
+			}
+		</style>
+	</head>
+
+	<body style="max-width: 640px !important;" ng-controller="information-Ctrl5">
+		<div class="bar bar-header bar-assertive login_heater">
+			<button class="button button-clear login_header_color" id="back"><i class="icon ion-chevron-left"></i></button>
+			<h1 class="title" style="font-size: 18px;font-weight: bold;">顺风车</h1>
+		</div>
+		<div class="MainPage_NewList my-information-list">
+			<span data-toggle='tab' data-target='#page1'>全部</span>
+			<span data-toggle='tab' data-target='#page2'>人找车</span>
+			<span data-toggle='tab' data-target='#page3'>车找人</span>
+			<span data-toggle='tab' data-target='#page4'>货找车</span>
+			<span data-toggle='tab' data-target='#page5'>车找货</span>
+		</div>
+		<div class="M-LS" style="width: 94%;margin-left: 3%;margin-right: 3%;">
+			<button class="sel_city button button-outline button-light M-LB" id="sel_city">选取省市区县<span class="caret"></span></button>
+		</div>
+		<hr class="hrStyle" />
+		<div class="MainPage_Content tab-content">
+			<div class="tab-pane fade in active" id="page1">
+				<div class="page1"></div>
+				<div class="M-LoadMore"><span>没有更多信息了</span></div>
+				<div class="M-null"></div>
+			</div>
+		    <div class="tab-pane fade" id="page2">
+		    	<p style="height: 600px; display: flex;flex-direction: row;justify-content: center;align-items: center;font-size: 18px;">暂无审核中信息</p>
+		    </div>
+		    <div class="tab-pane fade" id="page3" style="min-height: 600px;"> 
+		    	<p style="height: 600px; display: flex;flex-direction: row;justify-content: center;align-items: center;font-size: 18px;">暂无审核中信息</p>
+		    </div>
+		    <div class="tab-pane fade" id="page4" style="min-height: 600px;">
+		    	<p style="height: 600px; display: flex;flex-direction: row;justify-content: center;align-items: center;font-size: 18px;">暂无审核中信息</p>
+		    </div>
+		    <div class="tab-pane fade" id="page5" style="min-height: 600px;margin-top: 0;" >
+		    	<p style="height: 600px; display: flex;flex-direction: row;justify-content: center;align-items: center;font-size: 18px;">暂无审核中信息</p>
+		    </div>
+		</div>
+		<div class="MainPage_null"></div>
+		<!--底部-->
+		<div class="tabs tabs-icon-top footer-bar">
+           <a class="tab-item footer-L33" href="../index.html">
+              <i class="icon iconfont icon-shouye footer-icon"></i>
+              <span>首页</span>
+           </a>
+           <a class="tab-item footer-L33" href="#">
+              <i class="icon iconfont icon-zixun footer-icon"></i>
+              <span>资讯</span> 
+            </a>
+            <a class="tab-item footer-L33" href="#">
+              <i class="icon iconfont icon-paperplane footer-icon"></i>
+              <span>发布信息</span>
+            </a><a class="tab-item footer-L33" href="#" >
+              <i class="icon iconfont icon-jiaoyi footer-icon"></i>
+              <span>我的交易</span>
+            </a>
+            <a class="tab-item footer-L33" href="../user/User.html">
+              <i class="icon iconfont icon-04 footer-icon"></i>
+              <span>我的</span>
+            </a>
+        </div>
+		<script>
+			//		数组循环	
+			var arr=[
+{img:'../img/123.PNG',img1:'../img/flower1.png',img2:'../img/flower2.png',
+img3:'../img/flower3.png',text:'GS3546546',dengji:'20',
+shuju1:'1000',shuju2:'100',shuju3:'180',shuju4:'900',
+conent:'高档仿真花制作，由于新产品上市，国内外市场受欢迎供不应求。面向全国诚招联合生产经营加盟合作商户，产品包回收，提供订单，保障长年有活。产品批交批结。把分厂办到全国各地。'},
+{img:'../img/123.PNG',img1:'../img/flower1.png',img2:'../img/flower2.png',
+img3:'../img/flower3.png',text:'GS3546546',dengji:'20',
+shuju1:'1000',shuju2:'100',shuju3:'180',shuju4:'900',
+conent:'高档仿真花制作，由于新产品上市，国内外市场受欢迎供不应求。面向全国诚招联合生产经营加盟合作商户，产品包回收，提供订单，保障长年有活。产品批交批结。把分厂办到全国各地。'},
+{img:'../img/123.PNG',img1:'../img/flower1.png',img2:'../img/flower2.png',
+img3:'../img/flower3.png',text:'GS3546546',dengji:'20',
+shuju1:'1000',shuju2:'100',shuju3:'180',shuju4:'900',
+conent:'高档仿真花制作，由于新产品上市，国内外市场受欢迎供不应求。面向全国诚招联合生产经营加盟合作商户，产品包回收，提供订单，保障长年有活。产品批交批结。把分厂办到全国各地。'},
+{img:'../img/123.PNG',img1:'../img/flower1.png',img2:'../img/flower2.png',
+img3:'../img/flower3.png',text:'GS3546546',dengji:'20',
+shuju1:'1000',shuju2:'100',shuju3:'180',shuju4:'900',
+conent:'高档仿真花制作，由于新产品上市，国内外市场受欢迎供不应求。面向全国诚招联合生产经营加盟合作商户，产品包回收，提供订单，保障长年有活。产品批交批结。把分厂办到全国各地。'},
+{img:'../img/123.PNG',img1:'../img/flower1.png',img2:'../img/flower2.png',
+img3:'../img/flower3.png',text:'GS3546546',dengji:'20',
+shuju1:'1000',shuju2:'100',shuju3:'180',shuju4:'900',
+conent:'高档仿真花制作，由于新产品上市，国内外市场受欢迎供不应求。面向全国诚招联合生产经营加盟合作商户，产品包回收，提供订单，保障长年有活。产品批交批结。把分厂办到全国各地。'}
+];
+var html='';
+//循环数组
+for(var i=0;i<arr.length;i++){
+	html+=`<div class="M-C-Box">
+					<div class="M-C-Left">
+						<img src=`+arr[i].img+` class="M-C-UserImg" />
+					</div>
+					<div class="M-C-Right">
+						<div style="font-size: 10px;overflow: hidden;">
+							<div class="M-C-Detail-L">
+								<p style="margin-top: 16px;margin-bottom: 2px;">
+									<span>编号</span>
+									<span>`+arr[i].text+`</span>
+									<span>级别</span>
+									<span>`+arr[i].dengji+`级</span>
+								</p>
+								<div class="M-C-Type">销售</div>
+							</div>
+							<div class="M-C-Detail-R">
+								<button class="M-C-BoxBtn">
+		    				      <b class="icon iconfont icon-duihuakuang" style="font-size: 10px;"></b>
+		    				      <b>联系他</b>
+		    			        </button>
+							</div>
+						</div>
+						<div>
+							<p class="mui-ellipsis-3">`+arr[i].conent+`</p>
+							<span class="publish_readdetail">查看全文</span>
+							<br />
+							<img src=`+arr[i].img1+` style="width: 75px;height: 75px;" />
+							<img src=`+arr[i].img2+` style="width: 75px;height: 75px;" />
+							<img src=`+arr[i].img3+` style="width: 75px;height: 75px;" />
+							<br />
+						</div>
+						<div class="M-C-Footer">
+							<p style="font-size: 10px;margin-bottom: 0;margin-top: 8px;">刚刚</p>
+							<p style="display: flex;flex-direction: row;justify-content: space-around;align-items: center;">
+							<i class="icon iconfont icon-liulan"><span class="shoucang-color-black">`+arr[i].shuju1+`</span></i>
+							<i class="icon iconfont icon-dianzan"><span class="shoucang-color-black">`+arr[i].shuju2+`</span></i>
+							<i class="icon iconfont icon-pinglun"><span class="shoucang-color-black">`+arr[i].shuju3+`</span></i>
+							<i class="icon iconfont icon-shoucang information-i"><span class="shoucang-color-black">`+arr[i].shuju4+`</span></i>
+							</p>
+						</div>
+					</div>
+				</div>`
+}
+$('.page1').append(html)
+			
+			
+			
+		   $('#back').click(function(){
+		    	window.history.go(-1);
+		   })
+			
+            $('.icon-shoucangxing').click(function(){
+				$(this).toggleClass('shoucang-color-red');
+			})	
+			$('.icon-dianzan').click(function(){
+				$(this).toggleClass('shoucang-color-red');
+			})	
+			
+			$('.my-information-list span').click(function(){
+				$('.my-information-list span').css('color','black');
+				$(this).css('color','#CA0000');
+			})
+			
+		   angular.module('information-App', ['ionic']).controller('information-Ctrl5',function($scope, $ionicPopup, $timeout) {
+			//  删除 信息对话框
+           $scope.showConfirm = function() {
+             var confirmPopup = $ionicPopup.confirm({
+//             title: "",// String. 弹窗标题。
+//             template: "",// String (可选)。放在弹窗body内的html模板。
+               ubTitle: '', // String (可选)。弹窗的副标题。
+               templateUrl: 'delete_information_tip.html', // String (可选)。放在弹窗body内的一个html模板的URL。
+               okText: '确定',
+               okType: 'btn-danger', // String (默认: 'button-positive')。OK按钮的类型。
+               cancelText: '取消',
+               cancelType: 'btn-default',
+             });
+             confirmPopup.then(function(res) {
+               if(res) {
+                 console.log('确定');
+               } else {
+                 console.log('取消');
+               }
+             });
+           }
+           })
+		   
+		   
+		   //地址选择初始化1
+			var nameEl = document.getElementsByClassName('sel_city')[0];
+			var first = []; /* 省，直辖市 */
+			var second = []; /* 市 */
+			var third = []; /* 镇 */
+			var selectedIndex = [0, 0, 0]; /* 默认选中的地区 */
+			var checked = [0, 0, 0]; /* 已选选项 */
+			function creatList(obj, list) {
+				obj.forEach(function(item, index, arr) {
+					var temp = new Object();
+					temp.text = item.name;
+					temp.value = index;
+					list.push(temp);
+				})
+			}
+			creatList(city, first);
+			if(city[selectedIndex[0]].hasOwnProperty('sub')) {
+				creatList(city[selectedIndex[0]].sub, second);
+			} else {
+				second = [{
+					text: '',
+					value: 0
+				}];
+			}
+			if(city[selectedIndex[0]].sub[selectedIndex[1]].hasOwnProperty('sub')) {
+				creatList(city[selectedIndex[0]].sub[selectedIndex[1]].sub, third);
+			} else {
+				third = [{
+					text: '',
+					value: 0
+				}];
+			}
+			var picker = new Picker({
+				data: [first, second, third],
+				selectedIndex: selectedIndex,
+				title: '地址选择'
+			});
+			picker.on('picker.select', function(selectedVal, selectedIndex) {
+				var text1 = first[selectedIndex[0]].text;
+				var text2 = second[selectedIndex[1]].text;
+				var text3 = third[selectedIndex[2]] ? third[selectedIndex[2]].text : '';
+				nameEl.innerText = text1 + ' ' + text2 + ' ' + text3;
+			});
+			picker.on('picker.change', function(index, selectedIndex) {
+				if(index === 0) {
+					firstChange();
+				} else if(index === 1) {
+					secondChange();
+				}
+
+				function firstChange() {
+					second = [];
+					third = [];
+					checked[0] = selectedIndex;
+					var firstCity = city[selectedIndex];
+					if(firstCity.hasOwnProperty('sub')) {
+						creatList(firstCity.sub, second);
+
+						var secondCity = city[selectedIndex].sub[0]
+						if(secondCity.hasOwnProperty('sub')) {
+							creatList(secondCity.sub, third);
+						} else {
+							third = [{
+								text: '',
+								value: 0
+							}];
+							checked[2] = 0;
+						}
+					} else {
+						second = [{
+							text: '',
+							value: 0
+						}];
+						third = [{
+							text: '',
+							value: 0
+						}];
+						checked[1] = 0;
+						checked[2] = 0;
+					}
+
+					picker.refillColumn(1, second);
+					picker.refillColumn(2, third);
+					picker.scrollColumn(1, 0)
+					picker.scrollColumn(2, 0)
+				}
+
+				function secondChange() {
+					third = [];
+					checked[1] = selectedIndex;
+					var first_index = checked[0];
+					if(city[first_index].sub[selectedIndex].hasOwnProperty('sub')) {
+						var secondCity = city[first_index].sub[selectedIndex];
+						creatList(secondCity.sub, third);
+						picker.refillColumn(2, third);
+						picker.scrollColumn(2, 0)
+					} else {
+						third = [{
+							text: '',
+							value: 0
+						}];
+						checked[2] = 0;
+						picker.refillColumn(2, third);
+						picker.scrollColumn(2, 0)
+					}
+				}
+
+			});
+			picker.on('picker.valuechange', function(selectedVal, selectedIndex) {
+				console.log(selectedVal);
+				console.log(selectedIndex);
+			});
+
+			nameEl.addEventListener('click', function() {
+				picker.show();
+			});
+			
+			
+			$(function() {
+				$('.publish_readdetail').click(function() {
+					if($(this).text() == '查看全文') {
+						$(this).text('收起全文');
+					} else {
+						$(this).text('查看全文');
+					}
+					$(this).prev().toggleClass('mui-ellipsis-3');
+				});
+			});
+
+			$('.shoucang').click(function() {
+				$(this).toggleClass('shoucang-color-red');
+			})
+		</script>
+	</body>
+
+</html>

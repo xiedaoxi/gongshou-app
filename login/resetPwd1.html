@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../css/login.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/demo.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/ionic.min.css"/>
+		<title></title>
+	</head>
+	<body>
+		<div class="login_content">
+			<div class="bar bar-header bar-assertive">
+				<button class="button button-clear" id="back"><i class="icon iconfont icon-fanhui1"></i></button>
+				<span class="title">找回密码</span>
+			</div>
+			<div class="login_form content has-header">
+				<input type="text" name="" placeholder="请输入手机号码" />
+				<input type="text" name=""  placeholder="请输入验证码" id="get_code"/>
+				<input type="button" id="login_GetNumGetPwd" value="获取验证码" /></input>
+				<input type="text" name="username" id="username" placeholder="请输入新密码" />
+				<input type="text" name="password" id="password" placeholder="请确认新密码" />
+			    <input type="submit"  value="确定" class="login_formBtn"/>
+			</div>
+		</div>
+		<script src="../js/jquery-2.2.2.min.js" type="text/javascript" charset="utf-8"></script>
+	    <script type="text/javascript">
+	       $('#back').click(function(){
+		    	window.history.go(-1);
+		    })
+		    var flag=false;
+		    $('input[type="submit"]').click(function(){
+		    	$('input[type=text]').each(function(){
+		    		if ($(this).val() == "") {
+                        flag=false;
+                        return;
+                      }
+		    		else{
+		    			flag=true;
+		    		}
+		    	})
+		    	
+		    	if(flag){
+//		              window.location.href='resetPwd2.html';
+		            }
+		        else{
+		    	      alert('不能为空！')
+		            }
+		    })
+	</script>
+	</body>
+</html>

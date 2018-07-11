@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/ionic.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../css/main.css" />
+		<script src="../js/jquery-2.2.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/ionic.bundle.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body class="Edit_body" style="background: white;">
+		<div class="bar bar-header bar-assertive Edit_header" style="border: none;background-size:0;">
+			<button class="button button-clear login_header_color" id="fanhui" id="Return">
+				<i class="ion-chevron-left" style="font-size:20px;"></i><span style="margin-left: 5px;">返回</span>
+			</button>
+			<h3 class="title Edit_header_title">我的头像</h3>
+		</div>
+		<ul class="set-Myimg">
+			<li>动态头像</li>
+			<li>从相册选择头像</li>
+			<li>拍照</li>
+			<li class="max">查看大图</li>
+			<li class="Myimg">取消</li>
+		</ul>
+		<input class="file" type="file" accept="image/gif" style="display: none;"/>
+		<input class="file1" type="file" accept="image/*"/>
+		<input class="file2" type="file" accept="image/*" capture="camera" style="display: none;"/>
+		<!--<input type="file" accept="video/*" capture="camcorder">-->
+		<div class="My-head">
+			<img src="../img/123.PNG"/>
+		</div>
+			<!--底部-->
+		<!--<div class="tabs tabs-icon-top footer-bar">
+			<a class="tab-item footer-L33" href="../index.html">
+				<i class="icon iconfont icon-shouye footer-icon"></i>
+				<span>首页</span>
+			</a>
+			<a class="tab-item footer-L33" href="../message/message.html">
+				<i class="icon iconfont icon-zixun footer-icon"></i>
+				<span>资讯</span>
+			</a>
+			<a class="tab-item footer-L33" href="../publish/publish.html">
+				<i class="icon iconfont icon-paperplane footer-icon"></i>
+				<span>发布信息</span>
+			</a>
+			<a class="tab-item footer-L33" href="#">
+				<i class="icon iconfont icon-qiyeruzhu footer-icon"></i>
+				<span>入驻</span>
+			</a>
+			<a class="tab-item footer-L33 footer-active" href="../user/User.html">
+				<i class="icon iconfont icon-04 footer-icon"></i>
+				<span>我的</span>
+			</a>
+		</div>-->
+		<style>
+			html{background: #ddd;}
+			.title2{
+					color: white;
+				    display: block;
+   					position: absolute;
+    				right: 0;
+    				top: 0;
+    				z-index: 0;
+   					overflow: hidden;
+    				margin: 0 10px;
+    				min-width: 30px;
+    				height: 43px;
+    				text-align: center;
+   					text-overflow: ellipsis;
+   				 	white-space: nowrap;
+    				/*font-size: 17px;*/
+    				font-weight: 500;
+    				line-height: 44px;
+			}
+	.My-head{
+		height: 255px;
+		position: relative;
+		margin-top: 43px;
+		background: darkred;
+	}
+	.My-head>img{
+		position: absolute;
+		top:0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		margin: auto;
+		width: 155px;
+		height: 155px;
+		border-radius:50% ;
+	}
+.set-Myimg{
+	width: 92%;
+	position: absolute;
+	top: 265px;
+	left: 50%;
+	margin-left: -46%;
+	z-index: 2;
+	border-radius: 6px;
+	background: white;
+}
+.set-Myimg>li{
+	height: 67px;
+	line-height: 67px;
+	border-bottom:1px solid #ddd;
+	text-align: center;
+}
+.Myimg{
+	height: 94px !important;
+	line-height: 94px !important;
+	border-top:5px solid #ddd;
+}
+		</style>
+		 <script src="../js/localResizeIMG.js"></script>
+    <script src="../js/mobileBUGFix.mini.js"></script>
+    <script src="../js/ResizeIMG.js"></script>
+		<script>
+			$('#fanhui').click(function(){
+	        	window.location.href = document.referrer;
+	        })
+		
+		$('.E-btn').click(function(){
+			$('.E-btn').removeClass('button-assertive');
+			$(this).addClass('button-assertive');
+		})
+		
+		$('.Edit_recharge_delete_a').click(function(){
+			event.preventDefault();
+			$('.Edit_recharge_delete_a').css('color','black');
+			$(this).css('color','#CA0000');
+		})
+$('.set-Myimg>li').click(function(){
+	$(this).css({background:'#ddd'})
+})
+$('.set-Myimg>li').mouseup(function(){
+	$(this).css({background:'white'})
+})
+
+var img=$('.My-head>img').attr('src');
+$('.set-Myimg>li:eq(4)').click(function(){
+        	$('.My-head>img').attr('src',img)
+        	})
+        $(function () {
+        	$('.set-Myimg>li:eq(0)').click(function(){
+        		$('.file').click()
+        	})
+        	$('.set-Myimg>li:eq(1)').click(function(){
+        		$('.file1').click()
+        	})
+        	$('.set-Myimg>li:eq(2)').click(function(){
+        		$('.file2').click()
+        	})
+            //上传图片!!!!!!!!!!!!!!!!!!!!s
+            $('.file').ResizeIMG({
+                width: 100,
+                quality: 1.0,
+                success: function (result) {
+                    console.log(result);
+                    $('.My-head>img').attr('src',result.base64)
+                }
+            });
+             $('.file1').ResizeIMG({
+                width: 100,
+                quality: 1.0,
+                success: function (result) {
+                    console.log(result);
+                    $('.My-head>img').attr('src',result.base64)
+                }
+            });
+        $('.file2').ResizeIMG({
+                width: 100,
+                quality: 1.0,
+                success: function (result) {
+                    console.log(result);
+                    $('.My-head>img').attr('src',result.base64)
+                }
+            });
+            var rem_width=parseInt($("body").css("width"))/7.5;
+            $(".yb-view").scrollLeft(1.44*rem_width);
+    
+        });
+		</script>
+	</body>
+</html>

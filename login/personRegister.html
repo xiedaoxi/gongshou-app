@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/login.css" />
+		<link rel="stylesheet" type="text/css" href="../css/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="../css/ionic.min.css" />
+	</head>
+
+	<body  style="height: 100vh;overflow: scroll;">
+		<div class="login_content">
+			<!--<div class="bar bar-header bar-assertive">
+				<button class="button button-clear" id="back"><i class="icon iconfont icon-fanhui1"></i></button>
+				<span class="title">个人注册</span>
+			</div>-->
+			<div class="bar bar-header bar-assertive Edit_header" style="border: none;background-size:0;">
+			<button class="button button-clear login_header_color" id="fanhui" id="Return">
+				<i class="ion-chevron-left" style="font-size:20px;"></i>
+				返回
+			</button>
+			<p class="title Edit_header_title" style="font-size: 20px;">个人注册</p>
+			
+		</div>
+			<div class="content has-header">
+				<div class="unityRegister" style="margin-top: 18px;">
+					<p style="padding: 8px 0;margin-bottom: 0;">
+						<span>获取编号：</span>
+						<span style="color: #CA0000;font-size: 16px;">S</span>
+						<input type="text" name="" id="" value="" maxlength="1" class="InputNum" />
+						<input type="text" name="" id="" value="" maxlength="1" class="InputNum" />
+						<input type="text" name="" id="" value="" maxlength="1" class="InputNum" />
+						<input type="text" name="" id="" value="" maxlength="1" class="InputNum" />
+						<input type="text" name="" id="" value="" maxlength="1" class="InputNum" />
+						<input type="text" name="" id="" value="" maxlength="1" class="InputNum" />
+					</p>
+					<p style="color: #CA0000;font-size: 12px;padding: 0 0 8px 0">请填写身份证前6位数：以便区分区域，注册成功后便会获得编号</p>
+				</div>
+				<div class="login_form" style="margin-top: 0;">
+					<input type="text" name="" id="" placeholder="介绍人编号（必填）" />
+					<input type="text" name="" id="" placeholder="请输入手机号码">
+					<input type="text" name="" id="" placeholder="请输入手机验证码" />
+					<input type="text" name="" id="" placeholder="请输入密码" />
+					<input style="top: 116px;" type="button" id="login_GetNumGetPwd" value="获取验证码">
+					<input type="text" name="" id="" placeholder="请确认密码" />
+					<input type="text" name="" id="" placeholder="请输入昵称" />
+					<style>
+						.Edit_code_btn{width: 100px;position: absolute;top: 116px;right: 5%;}
+					</style>
+					<div class="personRegisterText">
+						<div class="personRegisterTextSpanL">
+							<span>性别</span>
+							<span>（注册后不能修改）</span>
+						</div>
+						<div class="personRegisterTextSpanR">
+							<label class="personLabel">
+					      <span class="icon iconfont icon-msnui-male personRegisterImg"></span>
+					      <span>男</span>
+					      <input type="radio"  name="sex" value="man"  checked="checked" style="display: none;"/>
+					    </label>
+							<label class="personLabel">
+					      <span class="icon iconfont icon-msnui-female personRegisterImg"></span>
+					      <span>女</span>
+					      <input type="radio"  name="sex" value="feman" style="display: none;"/>
+					    </label>
+						</div>
+						<p class="personRegisterTextP">
+							<span class="personRegisterCheck"><img src="../img/gougou.png"/></span>
+							<span class="personRegisterItemTip">我已经确认并阅读条款</span>
+							<span class="personRegisterItem">《使用条款和隐私政策》</span>
+						</p>
+					</div>
+					<input type="submit" value="注册并登录" class="changePwd_formBtn" />
+				</div>
+			</div>
+		</div>
+		<div class="personRegisterBlock">
+			<div class="personRegisterBlockHeader">
+				<p class="personRegisterBlockHeaderP item item-icon-right">
+					<span style="font-weight: bolder;">贡寿服务官网注册条款</span>
+					<i class="icon ion-close-round" style="font-size:16px;"></i>
+				</p>
+			</div>
+			<div class="personRegisterBlockContent" style="margin-top: 24px;">
+				<p>贡寿服务官网（http//:www. .com)是一个经国家公安部、工信部备案的大众创业平台网站，“贡寿”中文商标经国家商标局核准注册，注册会员可以免费在网站发布真实合法的信息。在此注册为创业会员及在之后进行的创业活动中应遵守以下会员注册条款：</p>
+
+				<p style="font-weight: bolder;">1、注册条款的接受</p>
+
+				<p>一旦会员在注册页面点击或勾选“阅读并同意接受注册条款”相关内容后，这就表示会员已经阅读并且同意与贡寿服务官网达成协议，并接受所有的注册条款。</p>
+
+				<p style="font-weight: bolder;">2、会员注册条件 </p>
+				<p>1) 在注册之日必须年满18周岁以上且具有完全民事行为能力；</p>
+				<p>2）在注册之日以及此后使用贡寿服务官网期间必须以创业和交友为目的；</p>
+				<p>3）向贡寿服务官网提供本人真实、合法和完整的资料，随时更新登记资料，保持其真实性和持续有效性；</p>
+				<p>4）提供真实有效的电子邮箱地址、电话号码等联系方式；</p>
+				<p>5）会员注册时必须填写介绍人编号方可成为注册会员，其中：单位会员标记为G，前六位数由注册人自己填写（县域编号与身份证前六位数相同） ，个人会员标记为S，前六位数由注册人自己填写（与本人身份证前六位数相同。）</p>
+				<p style="text-indent: 25px;">贡寿服务官网有权对注册会员提交的资料进行审核，并承诺不会对会员提交的资料进行泄露或者作其他目的之使用。</p>
+				<p style="text-indent: 25px;">如果会员提交的资料存在错误、不真实或者不完整，或者会员发布的信息不真实、发布的言论违反国家法律、行政法规和社会公德，贡寿服务官网有权暂停或终止向其提供全部或部分服务，并有权暂停或终止该会员的帐号。</p>
+
+				<p style="font-weight: bolder;">3、会员帐号、密码及安全</p>
+				<p>1) 在完成会员注册程序之后，会员将收到一个密码及帐号。会员有义务保证密码及帐号的安全。会员应对利用该密码及帐号所进行的一切活动负全部责任，包括任何经由贡寿服务官网以上载、张贴、发送电子邮件或任何其它方式传送的资讯、资料、文字、软件、音乐、音讯、照片、图形、视讯、信息或其它资料，无论系公开还是私下传送，均由内容提供者承担责任。 </p>
+				<p>2) 会员的密码或帐号遭到未获授权的使用，或者发生其它任何安全问题时，会员应立即通知贡寿服务官网。由于会员使用不当导致帐号、密码泄漏，进而导致其资料、信息泄漏的，由会员承担其不利后果，贡寿服务官网不承担责任。</p>
+				<p>3）会员有权随时查询、补充、更正自己的注册资料，但因特殊情况（如网站被采取司法程序、自然灾害、战争、黑客袭击、电脑病毒、网络故障）导致无法查询、登录的除外； </p>
+				<p>4）会员有权随时请求关闭账户。</p>
+
+				<p style="font-weight: bolder;">4、服务说明 </p>
+				<p>1)贡寿服务官网通过国际互联网为会员提供网络创业服务，包括在线及无线的相关业务。为使用网站服务，会员应自行配备进入国际互联网所必需的设备，包括计算机、数据机或其它存取装置，并自行支付登陆国际互联网所需要的费用。 </p>
+				<p>2)贡寿服务官网创业平台拟吸收会员成为股东，员额约为30000人（其中律师为3000人） ，平台原始总价值为1000万元（每股10万元）。</p>
+				<p>3)注册会员可以出资现金购买股权，也可以以贡寿服务官网评估认定的技术和其他资源作价入股。网站上线前工程师技术折股每位占0.2%，上线后工程师技术折股每人占0.02%，其他资源折股每人0.002%</p>
+				<p>4） 贡寿服务官网将有约20000名客服人员分布在全国各省、市、县，为全国会员服务。注册会员可以在本网站免费发布和搜索信息。注册会员发布的信息中不得有任何形式的联系方式，搜索的信息可精确到县级区域免费搜索需要的信息。</p>
+				<p>5)注册会员不限量发布真实、合法信息并由各地客服人员审核通过。</p>
+				<p>6)注册会员通过本网站平台不限量与全国各地客服人员直接交流（包括本网站约3000名律师），与交易对方谈好交易价格，将款项转到网站平台，成交后网站收取交易额5%服务费。</p>
+
+				<p style="font-weight: bolder;">5、会员级别及晋升制度</p>
+				<p style="text-indent: 25px;">所有注册会员按照级别顺序排名，级别越高排名越前，一级每天只能和一个会员交流，十级每天只能和十个会员交流，照此类推。200级以上可以申请为股东，每县限六人。股东优先在网站运营部任职。</p>
+				<p>获取级别方法：</p>
+				<p>1）注册成功获一级；</p>
+				<p>2）证件审核通过升为二级；</p>
+				<p>3）每在网站平台交易20元，交易双方各升一级，照此类推；</p>
+				<p>4）每介绍一个人会员注册成功，升一级；</p>
+				<p>5)每介绍一单位会员注册成功升十级。</p>
+				<p>6）注册会员如果私下交易未向贡寿服务网平台支付服务费，一经查实，网站平台给予收款方按20元一级降级处理，零级以下失去交流功能。对举报者给予双倍级别奖励。</p>
+
+				<p style="font-weight: bolder;">6、免责条款</p>
+				<p>1) 贡寿服务官网不保证其提供的服务一定能满足会员的要求和期望，也不保证服务不会中断，对服务的及时性、安全性、准确性都不作保证。 </p>
+				<p>2) 对于会员通过贡寿服务官网提供的服务传送的内容，贡寿服务官网会尽合理努力按照国家有关规定严格审查，但无法完全控制经由网站服务传送的内容，不保证内容的正确性、完整性或品质。因此会员在使用贡寿服务官网服务时，可能会接触到令人不快、不适当或令人厌恶的内容。在任何情况下，贡寿服务官网均不为会员经由网站服务以张贴、发送电子邮件或其它方式传送的任何内容负责。但贡寿服务官网有权依法停止传输任何前述内容并采取相应行动，包括但不限于暂停会员使用网站服务的全部或部分，保存有关记录，并根据国家法律法规、相关政策在必要时向有关机关报告并配合有关机关的行动。</p>
+				<p>3) 对于贡寿服务官网提供的各种广告信息、链接、资讯等，贡寿服务官网不保证其内容的正确性、合法性或可靠性，相关责任由广告商承担；并且，对于会员经由贡寿服务官网服务与广告商进行联系或商业往来，完全属于会员和广告商之间的行为，与贡寿服务官网无关。对于前述商业往来所产生的任何损害或损失，贡寿服务官网不承担任何责任。 </p>
+				<p>4) 对于用户上传的照片、资料、证件等，贡寿服务官网已采用相关措施并已尽合理努力进行审核，但不保证其内容的正确性、合法性或可靠性，相关责任由上传上述内容的会员负责。</p>
+				<p>5) 会员以自己的独立判断从事与网络创业和交友相关的行为，并独立承担可能产生的不利后果和责任，贡寿服务官网网站不承担任何法律责任。</p>
+				<p>6) 是否使用网站服务下载或取得任何资料应由会员自行考虑并自负风险，因任何资料的下载而导致的会员电脑系统的任何损坏或数据丢失等后果，贡寿服务官网不承担任何责任。 </p>
+				<p>7) 贡寿服务官网对所有会员自发组织的活动、自发成立的组织不负责任。</p>
+				<p>8) 对于本网站策划、发起、组织或是承办的任何会员活动（包括但不限于收取费用以及完全公益的活动），贡寿服务官网不对上述活动的效果向会员作出任何保证或承诺，也不担保活动期间会员自身行为的合法性、合理性。由此产生的任何对于会员个人或者他人的人身或者是名誉以及其他损害，本网站不承担任何责任。</p>
+				<p>9) 对于会员的投诉，贡寿服务官网将尽合理努力认真核实，但不保证最终公之于众的投诉的真实性、合法性，对于投诉内容侵犯会员隐私权、名誉权等合法权利的，所有法律责任由投诉者承担，与贡寿服务官网无关。 </p>
+				<p>10) 对于会员购买贡寿服务官网服务需要上门送货和收款的，由于贡寿服务官网快递服务提供商造成的延误，贡寿服务官网不承担责任。</p>
+				<p>11) 尽管贡寿服务官网已采取相应的技术保障措施，但会员仍有可能收到各类的广告信（贡寿服务官网发送的广告信除外）或其他不以网络创业和交友为目的邮件，贡寿服务官网不承担责任。 </p>
+				<p>12) 贡寿服务官网未授权任何第三方销售任何贡寿服务官网的线上服务产品，任何第三方出售贡寿服务官网线上服务产品的，均可能属于非法的销售行为，贡寿服务官网不保证提供相应的服务。 </p>
+
+				<p style="font-weight: bolder;">7、会员应遵守的义务</p>
+				<p>1) 在使用贡寿服务官网的服务时，应当遵守国家法律、行政法规和公共道德，维护正常的互联网管理秩序。</p>
+				<p>2) 不得未经合法授权而截获、篡改、收集、储存或删除他人个人信息、电子邮件或其它数据资料，或将获知的此类资料用于任何非法或不正当目的。</p>
+				<p>3) 因会员通过贡寿服务官网提供的服务提供、张贴或传送内容、违反本服务条款、或侵害他人任何权利而导致任何第三人对贡寿服务官网提出任何索赔或请求，会员应当赔偿贡寿服务官网或其他合作伙伴的损失，包括但不限于律师费和合理的调查费用等。 </p>
+				<p>4) 会员在投诉其他会员有违法行为或违反本注册条款情形时，投诉者应承担投诉不实所产生的全部法律责任。如侵犯他人的合法权益，投诉人应独立承担全部法律责任。如给贡寿服务官网造成损失的，投诉人应对贡寿服务官网履行相应的赔偿责任。 </p>
+				<p>5）会员因遭受不可抗力事件时，应及时采取必要措施消除影响，并将遭受不可抗力的情形及时采用电子邮件或页面公告的形式通知贡寿服务官网。</p>
+
+				<p style="font-weight: bolder;">8、法律适用和司法管辖条款</p>
+				<p style="text-indent: 25px;">本注册条款的生效、履行、解释及争议的解决均适用中华人民共和国的现行法律、行政法规和有关司法解释，所发生的争议应提交 仲裁委员会，并适用提起仲裁时该会现行有效的仲裁规则进行仲裁，其仲裁裁决是终局的。本注册条款因与中华人民共和国现行法律相抵触而导致部分条款无效的，不影响其他条款的效力。</p>
+			</div>
+		</div>
+
+		<script src="../js/jquery-2.2.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$('#back').click(function() {
+				window.history.go(-1);
+			})
+			var flag = false;
+			$('input[type="submit"]').click(function() {
+				$('input[type=text]').each(function() {
+					if($(this).val() == "") {
+						flag = false;
+						return;
+					} else {
+						flag = true;
+					}
+				})
+
+				if(flag == true) {
+					if($('.personRegisterCheck Img').css('display') == 'block') {
+						window.location.href = 'personRegisterSuccess.html';
+					} else {
+						alert('请同意条款！')
+					}
+				} else {
+					alert('不能为空！')
+				}
+			})
+			$('.personRegisterBlockHeaderIcon,.personRegisterItem').click(function() {
+				$('.personRegisterBlock').toggle();
+			})
+			$('.personRegisterCheck').click(function() {
+				$('.personRegisterCheck Img').toggle();
+			})
+$('.personRegisterBlockHeaderP>i').click(function() {
+				$('.personRegisterBlock').hide();
+			})
+			onload = function() {
+				var InputNum = document.getElementsByClassName("InputNum");
+				for(var i = 0; i < InputNum.length; i++) {
+					InputNum[i].index = i;
+					InputNum[i].onkeyup = function() {
+						if(event.keyCode != 8) {
+							var next = this.index + 1;
+							if(next > InputNum.length - 1) return;
+							InputNum[next].focus();
+						} else {
+							var pre = this.index - 1;
+							if(pre < 0) return;
+							InputNum[pre].focus();
+						}
+					}
+				}
+			}
+
+			//          判断radio男女
+			$('.personRegisterImg').eq(0).css('color', '#ffc600');
+			$("input[type=radio]").click(function() {
+				if($('input[type="radio"]:checked').val() == 'man') {
+					$('.personRegisterImg').eq(0).css('color', '#ffc600');
+					$('.personRegisterImg').eq(1).css('color', 'black');
+				}
+				if($('input[type="radio"]:checked').val() == 'feman') {
+					$('.personRegisterImg').eq(0).css('color', 'black');
+					$('.personRegisterImg').eq(1).css('color', '#ffc600');
+				}
+
+			})
+			//		    60秒后重新发送
+			var t=0;
+		    $('#login_GetNumGetPwd').click(function time(){
+		    	$('#login_GetNumGetPwd').css({background:'#ddd'})
+		    	tin=setInterval(function(){
+		    		t++;console.log(t)
+		    		$('#login_GetNumGetPwd').val(t+'秒后重新发送')
+		    	},1000)
+		    	$('#login_GetNumGetPwd').unbind('click')
+		    	setTimeout(function(){
+		    		$('#login_GetNumGetPwd').css({background:'#ca0000'})
+		    		t=0;
+		    		clearInterval(tin)
+		    		$('#login_GetNumGetPwd').click(time)
+		    		$('#login_GetNumGetPwd').val('获取验证码')
+		    	},61000)
+		    })
+		</script>
+	</body>
+
+</html>

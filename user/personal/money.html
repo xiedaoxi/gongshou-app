@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html >
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/ionic.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/main.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/demo.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/login.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/mobileSelect.css"/>
+		<script src="../../js/jquery-2.2.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/ionic.bundle.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/city.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/picker.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/mobileSelect.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body style="max-width: 640px !important;">
+		<div class="bar bar-header bar-assertive login_heater">
+			<button class="button button-clear login_header_color" id="back"><i class="icon ion-chevron-left"></i></button>
+			<h1 class="title" style="font-size: 18px;font-weight: bold;">月薪范围</h1>
+		</div>
+		<hr class="hrStyle" />
+		<div class="MainPage_Content my-information-list" style="background-color: #F1F1F1;">
+			<div class="M-LS">
+				<button class=" button button-outline button-light M-LB" id="sel_height">选取月薪范围<span class="caret"></span></button>
+			</div>
+			<button class="button button-assertive button-full" value="">确定</button>
+		</div>
+		<script src="js/jquery-2.2.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+		   $('#back').click(function(){
+		    	window.history.go(-1);
+		   })
+		    $('.button-light').click(function(){
+		   	  $('.button-light').removeClass('button-calm');
+		   	  $(this).addClass('button-calm');
+		   })
+		    
+		    
+		    	//性别
+			var HeightArr = ['保密','2千以下', '3千~5千','5千~8千','8千~1万','1万~1.2万','1.2万~1.5万','2万以上'];
+			var mobileSelect1 = new MobileSelect({
+				trigger: '#sel_height',
+				title: '选择月薪范围',
+				wheels: [{
+					data: HeightArr
+				}],
+				position: [2], //初始化定位 打开时默认选中的哪个 如果不填默认为0
+				transitionEnd: function(indexArr, data) {
+					//console.log(data);
+				},
+				callback: function(indexArr, data) {
+					console.log(data);
+				}
+			});
+		</script>
+	</body>
+
+</html>
